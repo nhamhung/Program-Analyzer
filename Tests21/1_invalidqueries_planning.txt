@@ -1,0 +1,315 @@
+# SYNTACTIC ERRORS
+<
+	Note that all syntactic error test cases should
+	select BOOLEAN and expect nothing.
+	This is to prove that the errors are treated as syntactic.
+>
+
+
+## Declaration clauses (1-19):
+- Not declared (1)
+- Too few/too many terms (2, 3)
+- Invalid DEType (4)
+- Invalid synonym name (5)
+- Missing semicolon (6)
+
+## Language (21-49):
+
+###	'and' keyword (21-39)
+- Whitespace within word (21)
+- Occurs after all conditional clauses (22)
+- Occurs as first conditional clause (23)
+- Used in addition to 'such that' (24)
+- Used in addition to 'pattern' (25)
+- Used in addition to 'with' (26)
+- Used twice in a row (27)
+- Is missing (28)
+- Directly connects two clauses of different types (29)
+- Indirectly connects two clauses of different types (30)
+
+## Select phrase (51-99):
+
+### General Select (51-59)
+- 'select' instead of 'Select' (51)
+- No space after 'Select' (52)
+- Extra semicolon at end (53)
+- String selected (54)
+- Integer selected (55)
+
+### Synonym selections (61-69)
+- Contains illegal chars (61)
+- Two words (62)
+- Starts with illegal char (63)
+
+### BOOLEAN selection (71-79)
+- Lowercase (71)
+- Split into two (72)
+- Occurs before another word (73)
+- Part of a word (74)
+
+### Attribute selection (81-89)
+- No period (81)
+- Illegal chars in synonym (82)
+- Space before or after period (83, 84)
+- Invalid attribute type (85)
+- Space within attribute (86)
+
+### Tuple selection (91-99)
+- Empty brackets (91)
+- Missing angle bracket (92, 93)
+- Missing comma (94)
+- Dangling comma (95)
+- Invalid synonym in middle (96)
+- Invalid attribute in back (97)
+- Invalid type in tuple (98, 99)
+
+## Such That clauses (101-399)
+
+### General Such That (101-119)
+- No space between 'such that' (101)
+- No whitespace before/after 'such that' (102, 103)
+- Incorrect ordering of clause (104)
+- Non-matching abstraction name (105)
+- Space within abstraction name (106)
+- Missing left/right parenthesis (107, 108)
+- Missing comma in parameters (109)
+
+### Follows (121-139)
+- String in first/second parameter (121, 122)
+- Float in first/second parameter (123, 124)
+- Invalid integer 01 in first/second parameter (125, 126)
+- Negative integer -1 in first/second parameter (127, 128)
+- Invalid synonym 's,' in first/second parameter (129, 130)
+- Parameter is '_s' in first/second parameter (131, 132)
+
+### FollowsT (141-149)
+- Space before asterisk (141)
+
+### Parent (151-169)
+- String in first/second parameter (151, 152)
+- Float in first/second parameter (153, 154)
+- Invalid integer 01 in first/second parameter (155, 156)
+- Negative integer -1 in first/second parameter (157, 158)
+- Invalid synonym 's,' in first/second parameter (159, 160)
+- Parameter is '_s' in first/second parameter (161, 162)
+
+### ParentT (171-179)
+- Space before asterisk (171)
+
+### Uses (181-199)
+- Integer in second parameter (181)
+- Float in first/second parameter (182, 183)
+- Invalid integer 01 in first parameter (184)
+- Negative integer -1 in first parameter (185)
+- Invalid synonym 's,' in first/second parameter (186, 187)
+- Parameter is '_s' in first/second parameter (188, 189)
+- Invalid synonym string '1' in second parameter (190)
+
+### Modifies (201-219)
+- Integer in second parameter (201)
+- Float in first/second parameter (202, 203)
+- Invalid integer 01 in first parameter (204)
+- Negative integer -1 in first parameter (205)
+- Invalid synonym 's,' in first/second parameter (206, 207)
+- Parameter is '_s' in first/second parameter (208, 209)
+- Invalid synonym string '1' in second parameter (210)
+
+### Calls (221-239)
+- Integer in first/second parameter (221, 222)
+- Invalid synonym 's,' in first/second parameter (223, 224)
+- Parameter is '_s' in first/second parameter (225, 226)
+- Invalid synonym string '1' in first/second parameter (227, 228)
+
+### CallsT (241-249)
+- Space before asterisk (241)
+
+### Next (251-269)
+- String in first/second parameter (251, 252)
+- Float in first/second parameter (253, 254)
+- Invalid integer 01 in first/second parameter (255, 256)
+- Negative integer -1 in first/second parameter (257, 258)
+- Invalid synonym 's,' in first/second parameter (259, 260)
+- Parameter is '_s' in first/second parameter (261, 262)
+
+### NextT (271-279)
+- Space before asterisk (271)
+
+### Affects (281-299)
+- String in first/second parameter (281, 282)
+- Float in first/second parameter (283, 284)
+- Invalid integer 01 in first/second parameter (285, 286)
+- Negative integer -1 in first/second parameter (287, 288)
+- Invalid synonym 's,' in first/second parameter (289, 290)
+- Parameter is '_s' in first/second parameter (291, 292)
+
+### AffectsT (301-309)
+- Space before asterisk (301)
+
+### NextBip (311-329)
+- String in first/second parameter (311, 312)
+- Float in first/second parameter (313, 314)
+- Invalid integer 01 in first/second parameter (315, 316)
+- Negative integer -1 in first/second parameter (317, 318)
+- Invalid synonym 's,' in first/second parameter (319, 320)
+- Parameter is '_s' in first/second parameter (321, 322)
+
+### NextBipT (331-339)
+- Space before asterisk (331)
+
+### AffectsBip (341-359)
+- String in first/second parameter (341, 342)
+- Float in first/second parameter (343, 344)
+- Invalid integer 01 in first/second parameter (345, 346)
+- Negative integer -1 in first/second parameter (347, 348)
+- Invalid synonym 's,' in first/second parameter (349, 350)
+- Parameter is '_s' in first/second parameter (351, 352)
+
+### AffectsBipT (361-369)
+- Space before asterisk (361)
+
+## Pattern clauses (401-699)
+
+### General Pattern (401-459)
+- No whitespace before/after 'pattern' (401, 402)
+- Whitespace within 'pattern' (403)
+- Incorrect ordering of clause (404)
+- Missing left/right parenthesis (405, 406)
+- Missing comma in parameters (non-if) (407)
+- Missing comma in parameters (if) (408)
+
+### Assign (461-519)
+- Integer in first parameter (461)
+- Invalid synonym 's,' in first parameter (462)
+- Single-apostrophe string in first parameter (463)
+- Parameter is '_s' in first/second parameter (464, 465)
+- Invalid synonym string '1' in first parameter (466)
+- Synonym selected in second parameter (467)
+- Single-apostrophe string selected in second parameter (468)
+- Integer selected in second parameter (469)
+- Missing quotes in expression (no wildcards) (470)
+- Missing quotes in expression (with wildcards) (471)
+- Missing front/back wildcard in expression (with quotes) (472, 473)
+- Invalid synonym tokens in expression (474)
+- Invalid operator tokens in expression (475)
+- Incomplete parentheses in expression (476)
+
+### If (541-609)
+- Integer in first parameter (541)
+- Invalid synonym 's,' in first parameter (542)
+- Parameter is '_s' in first/second/third parameter (543, 544, 545)
+- Invalid synonym string '1' in first parameter (546)
+- Synonym in second/third parameter (547, 548)
+- Integer in second/third parameter (549, 550)
+- Pattern expression in second/third parameter (without wildcards) (551, 552)
+- Pattern expression in second/third parameter (with wildcards) (553, 554)
+
+### While (621-699)
+- Integer in first parameter (621)
+- Invalid synonym 's,' in first parameter (622)
+- Parameter is '_s' in first/second parameter (623, 624)
+- Invalid synonym string '1' in first parameter (625)
+- Synonym in second parameter (626)
+- Integer in second parameter (627)
+
+## With clauses (701-999)
+
+### General With (701-799)
+- Whitespace within 'with' (701)
+- No clause after 'with' (702)
+- Incorrect ordering of clause (703)
+- No whitespace before/after 'with' (704, 705)
+- Missing/Extra '=' token (706, 707)
+
+### Parameters (left and right) (801-899)
+- Attribute is called on integer (801, 802)
+- Attribute is called on invalid synonym (803, 804)
+- Invalid attribute type (805, 806)
+
+
+
+# SEMANTIC ERRORS
+<
+	Note that all semantic error test cases come as a pair.
+	Select <non-BOOLEAN> : expect none
+	Select BOOLEAN		 : expect FALSE
+	This is to check the specific behaviour that semantic BOOLEAN errors
+		return FALSE.
+>
+
+
+## Declaration clauses (1001-1009)
+- Re-declared synonym (1001, 1002)
+
+## Select phrase (1011-1099)
+
+### Synonym selected
+- Synonym not declared (1011)
+
+### Attribute selected
+- Attribute synonym not declared (1012)
+- Incorrect match between synonym type and attribute (1013)
+
+### Tuple selected
+- A synonym is undeclared (1014)
+- An attribute is invalid (1015)
+
+## Such That Clauses (1101-1399)
+
+### Follows, FollowsT, Parent, ParentT, Next, NextT, NextBip, NextBipT (1101-1199)
+- Undeclared synonym in first/second parameter (1101-1139)
+- variable/procedure/constant in first/second parameter (1101-1139)
+- BOOLEAN variants of queries (1141-1179)
+
+### Affects, AffectsT, AffectsBip, AffectsBipT (1201-1249)
+- Undeclared synonym in first/second parameter (1201-1219)
+- Not statement/prog_line/assign in first/second parameter (1201-1219)
+- BOOLEAN variants of queries (1221-1239)
+
+### Calls, CallsT (1251-1299)
+- Undeclared synonym in first/second parameter (1251-1259)
+- Non-procedure in first/second parameter (1251-1259)
+- BOOLEAN variants of queries (1261-1269)
+
+### Uses, Modifies (1301-1349)
+- Undeclared synonym in first/second parameter (1301-1302, 1311-1312)
+- read/print in first parameter for Uses/Modifies (1303, 1313)
+- Non-variable in second parameter (1304, 1314)
+- Wildcard in first parameter (1305, 1315)
+- BOOLEAN variants of queries (1321-1339)
+
+## Pattern Clauses (1401-1699)
+
+### General (1401-1449)
+- Synonym in front is undeclared (1401, 1402)
+- Synonym in front not assign/if/while (1403, 1404)
+
+### Assign (1451-1499)
+- Undeclared synonym in first parameter (1451, 1452)
+- Non-variable synonym in first parameter (1453, 1454)
+
+### If (1501-1549)
+- Undeclared synonym in first parameter (1501, 1502)
+- Non-variable synonym in first parameter (1503, 1504)
+
+### While (1551-1599)
+- Undeclared synonym in first parameter (1551, 1552)
+- Non-variable synonym in first parameter (1553, 1554)
+- Pattern expression in second parameter (without wildcards) (1555, 1556)
+- Pattern expression in second parameter (with wildcards) (1557, 1558)
+
+## With Clauses (1701-1999)
+
+### Terms (1701-1799)
+- Undeclared synonym in first/second parameter (1701, 1702)
+- Undeclared synonym in attribute of first/second parameter (1703, 1704)
+- Incorrect design entity type in attribute of first/second parameter (1705, 1706)
+- Synonym used is not prog_line in first/second parameter (1707, 1708)
+- BOOLEAN variants of queries (1711-1718)
+
+### Combinations (1801-1899)
+- Wrong type combination (int vs str) (1801)
+- Wrong type combination (str-attr vs int) (1802)
+- Wrong type combination (int-attr vs str) (1803)
+- Wrong type combination (str-attr vs int-attr) (1804)
+- BOOLEAN variants of queries (1851-1854)
+

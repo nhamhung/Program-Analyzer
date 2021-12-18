@@ -1,0 +1,5 @@
+1 - dummy query, only to see if DE can even extract from this source in time
+assign a;
+Select BOOLEAN
+TRUE
+5000

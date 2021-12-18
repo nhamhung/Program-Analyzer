@@ -1,0 +1,260 @@
+1 - Invalid Select BOOLEAN query with incorrect query syntax returns empty result
+stmt s; variable v;
+Select BOOL EAN such that Uses(s, v)
+none
+5000
+2 - Invalid Select BOOLEAN query with incorrect clause param returns empty result
+stmt s; procedure p;
+Select BOOLEAN such that Uses(p, s)
+FALSE
+5000
+3 - Valid Select BOOLEAN query where all clauses evaluate to true without evaluating any synonyms returns true
+
+Select BOOLEAN such that Modifies(6, "sleep") such that Uses("main", "tune")
+TRUE
+5000
+4 - Valid Select BOOLEAN query where all clauses evaluate to true without any overlapping synonyms returns true
+while w; call c, c1; assign a, a1; variable v, v1;
+Select BOOLEAN such that Parent(w, c) and Follows(c1, a) and Modifies(a1, v) pattern w(v1, _)
+TRUE
+5000
+5 - Valid Select BOOLEAN query where all clauses evaluate to true with overlapping synonyms returns true
+call c; while w; assign a; variable v;
+Select BOOLEAN such that Follows*(c, w) and Parent(w, a) and Modifies(a, v) and Uses(w, v)
+TRUE
+5000
+6 - Valid Select BOOLEAN query where the last of the many clauses evaluate to false independently returns false
+while w; assign a, a1; variable v; if ifs; read r;
+Select BOOLEAN such that Follows(2, 3) and Parent*(w, a) and Uses(a1, v) pattern ifs(v, _, _) such that Parent(ifs, r)
+FALSE
+5000
+7 - Valid Select BOOLEAN query where all clauses evaluate to true independently but false together returns false
+while w; call c; variable v;
+Select BOOLEAN such that Parent (w, c) and Uses(w, "tilt") pattern w(v, _)
+FALSE
+5000
+21 - Invalid Select TUPLE syntax returns empty result
+assign a; variable v;
+Select <a, v, _> such that Follows(_, _)
+none
+5000
+22 - Invalid Select TUPLE query where one of the selected tuples is undeclared returns empty result
+assign a; variable v;
+Select <a1, v> pattern w(v, _, _)
+none
+5000
+23 - Valid Select TUPLE query where entities in selected tuple is not evaluated in some clause
+print pn; call cl; assign a, a1, a2; while w; variable v;
+Select <pn, cl> such that Follows(a, w) and Parent(w, a1) pattern a2(v, _"i/j/k"_)
+5 2, 5 6, 5 9, 5 14, 16 2, 16 6, 16 9, 16 14, 17 2, 17 6, 17 9, 17 14, 18 2, 18 6, 18 9, 18 14
+5000
+24 - Valid Select TUPLE query where some entities in selected tuple is not evaluated in some clause
+constant c; while w; print pn;
+Select <c, w> such that Parent(w, pn)
+5 3, 6 3, 7 3, 10000 3, 0 3, 100 3, 10 3, 1 3
+5000
+25 - Valid Select TUPLE query where all entities in selected tuple is evaluated in the same clause
+assign a; variable v; while w;
+Select <a, v> such that Parent(w, a) and Uses(a, v) pattern w(v, _)
+12 tilt
+5000
+26 - Valid Select TUPLE query where all entities in selected tuple is evaluated in different clauses
+assign a; procedure p; variable v; if ifs;
+Select <a, p> such that Uses(a, v) and Modifies(p, v) pattern ifs(v, _, _)
+7 main, 10 main, 12 main, 15 main
+5000
+27 - Valid Select TUPLE query where one of the selected entities does not exist in the source code returns empty result
+read r; stmt s, s1;
+Select <r, s> such that Follows (s, s1)
+none
+5000
+28 - Valid Select TUPLE query where one of the selected entity is in the source code but the other selected entities are involved in some clause that evaluates to false returns empty result
+stmt s; print pn; if ifs; while w;
+Select <s, pn> such that Parent (ifs, pn) and Parent(w, pn)
+none
+5000
+29 - Valid Select TUPLE query that involves a large amount of design entities in a complex query
+while w; assign a; variable v; print pn; constant c;
+Select <w, a, v, pn, c> such that Parent*(w, a) and Modifies(a, v) and Uses(pn, v) with a.stmt# = c.value
+8 10 anger 5 10
+5000
+41 - Invalid Select ATTRIBUTE syntax returns empty result
+assign a; print pn;
+Select a.stmt such that Follows(a, pn)
+none
+5000
+42 - Invalid Select ATTRIBUTE where attribute type for the selected design entity is not supported returns empty result
+while w; stmt s; assign a;
+Select w.varName such that Parent(s, a)
+none
+5000
+43 - Valid Select ATTRIBUTE where selected design entity is not evaluated in some clause
+if ifs; call cl; procedure p, p1; while w;
+Select w.stmt# such that Parent(ifs, cl) and Calls(p, p1) and Uses(p, "anger")
+3, 8, 11
+5000
+44 - Valid Select ATTRIBUTE where selected design entity requires conversion from integer to name
+print pn; stmt s; variable v;
+Select pn.varName such that Parent(s, pn) and Modifies(s, v) with v.varName = pn.varName
+anger, sleep
+5000
+45 - Valid Select ATTRIBUTE TUPLE where elements in tuple are attributes that correspond to their original synonym
+assign a; procedure p; variable v;
+Select <a.stmt#, p.procName> such that Modifies(p, v) and Calls(p, "beepBeep") pattern a(_, _"tilt*100"_)
+12 makeNoise
+5000
+46 - Valid Select ATTRIBUTE TUPLE where elements in tuple are required to be converted from integer to name
+print pn; call cl; procedure p; variable v; while w;
+Select <pn.varName, cl.procName> such that Modifies(p, v) and Uses(pn, v) and Parent(w, cl) with cl.procName = p.procName
+sleep makeNoise
+5000
+47 - Valid Select ATTRIBUTE TUPLE where selected attributes all belong to the same design entity
+procedure p, p1, p2; call cl;
+Select <cl, cl.stmt#, cl.procName> such that Calls(p, p1) and Calls(p1, p2) with cl.procName = p2.procName
+6 6 makeNoise, 9 9 makeNoise, 14 14 beepBeep
+5000
+48 - Valid Select ATTRIBUTE TUPLE where some elements the tuples are attributes while others are design entities
+variable v; assign a;
+Select <v, a.stmt#, a.stmt#> such that Modifies(a, v) pattern a(_, _"time"_)
+anger 10 10, sleep 15 15, tilt 12 12, time 7 7
+5000
+49 - Valid Select ATTRIBUTE TUPLE where elements in the tuples are attributes of the same design entity type but different synonym
+stmt s1, s2, s3;
+Select <s1.stmt#, s2.stmt#, s3.stmt#> such that Follows(s1, s2) and Follows(s2, s3)
+4 5 6, 9 10 11
+5000
+100 - Valid ModifiesP and UsesP query where synonyms in these clauses are independent
+procedure p, p1, p2;
+Select p1.procName such that Modifies(p, "time") and Modifies (p1, "time") and Uses(p2, "tune")
+main
+5000
+61 - Invalid prog line in such that clause
+prog_line n, n1;
+Select n such that Modifies(n, n1)
+none
+5000
+62 - Invalid prog line in with clause
+stmt s; prog_line n;
+Select s with s.stmt# = n.stmt#
+none
+5000
+63 - Valid Select prog line with with clause
+assign a; prog_line n;
+Select n with a.stmt# = n
+4, 7, 10, 12, 15
+5000
+64 - Valid Select prog line with such that clauses
+if ifs; prog_line n;
+Select n such that Parent(ifs, n)
+2, 3, 7, 14, 15, 16
+5000
+101 - Valid ModifiesP and UsesP query where synonyms in these clauses are independent return false
+variable v; procedure p, p1; assign a; while w;
+Select v such that Modifies(p, v) and Parent(w, a) and Uses(p1, "cap00")
+none
+5000
+102 - Valid ModifiesP and UsesP query where synonyms in these clauses are overlapping
+procedure p; variable v, v1; assign a; if ifs;
+Select p such that Modifies(p, v) and Uses(p, v1) pattern a(v, "10 * time + x * y") pattern ifs(v1, _, _)
+main, ringAlarm
+5000
+103 - Valid ModifiesP and UsesP query where synonyms in these clauses are overlapping return empty result
+stmt s; procedure p; variable v; assign a; while w;
+Select s such that Modifies(p, v) and Uses(p, v) and Modifies(a, v) and Uses(a, v) and Parent(w, a) and pattern a(_, "time+1")
+none
+5000
+104 - Valid ModifiesP and UsesP query where synonyms in these clauses are similar design entity return true
+procedure p, p1, p2, p3, p4; variable v, v1, v2, v3, v4;
+Select BOOLEAN such that Modifies(p, v) and Modifies(p1, v1) and Modifies(p2, v2) and Modifies(p3, v3) and Modifies(p4, v4)
+TRUE
+5000
+105 - Valid ModifiesP and UsesP query where synonyms in these clauses are identical return empty result
+variable v; procedure p;
+Select v such that Modifies(p, v) and Uses(p, v) with v.varName = "tune"
+none
+5000
+106 - Valid Calls query where synonyms in Calls clause is independent from others returns false
+procedure p, p1;
+Select BOOLEAN such that Calls(p, p1) and Calls("ringAlarm", "beepBeep")
+FALSE
+5000
+107 - Valid Calls query where synonyms in Calls clause is overlapping
+procedure p, p1, p2;
+Select p such that Calls(p, p1) and Calls(p1, p2) with p1.procName = "ringAlarm"
+main
+5000
+108 - Valid Calls and Calls* query where synonyms in Calls and Calls* are independent
+procedure p, p1;
+Select BOOLEAN such that Calls(p, p1) and Calls*("ringAlarm", "beepBeep")
+TRUE
+5000
+109 - Valid Calls and Calls* query where synonyms in Calls and Call* are dependent
+procedure p, p1, p2;
+Select p1 such that Calls(p, p1) and Calls*(p1, p2) and Uses(p2, "tune")
+ringAlarm, makeNoise
+5000
+110 - Valid ModifiesP, UsesP, Calls where synonyms are all overlapping
+procedure p, p1; variable v;
+Select <p, p1, v> such that Modifies(p, v) and Calls(p, p1) and Uses(p1, v)
+main ringAlarm time, main ringAlarm anger, main ringAlarm tilt, main ringAlarm sleep, main makeNoise time, main makeNoise sleep, ringAlarm makeNoise sleep
+5000
+121 - Valid pattern w/ifs query where synonyms in these clauses are independent
+while w; if ifs; variable v;
+Select w pattern w("time", _) pattern ifs(v, _, _)
+3
+5000
+122 - Valid pattern w/ifs query where synonyms in these clauses are dependent
+variable v; while w; if ifs;
+Select v pattern w(v, _) pattern ifs(v, _, _)
+time
+5000
+123 - Valid pattern w/ifs query where synonyms overlap with other such that clauses
+while w; variable v; assign a; procedure p;
+Select <w.stmt#, v.varName> such that Follows(a, w) and Calls(p, "ringAlarm") and Modifies(p, v) pattern w(v, _)
+11 anger, 11 tilt
+5000
+124 - Valid pattern w/ifs query where synonyms overlap with other such that clauses return empty result
+while w, w1; variable v; procedure p, p1, p2;
+Select BOOLEAN such that Parent(w, w1) pattern w1(v, _) such that Modifies(p2, v) and Calls(p, p1) and Calls(p1, p2)
+FALSE
+5000
+140 - Invalid with query syntax returns empty result
+assign a; while w;
+Select <a, a.stmt#> with a.stmt# = w
+none
+5000
+141 - Invalid with query with incorrect attributes return empty result
+while w; variable v; assign a;
+Select w.stmt# with v.varName = a.varName
+none
+5000
+142 - Valid multiple with clauses query where clauses evaluate independently to true
+print pn; variable v; assign a; constant c;
+Select <pn.stmt#, v.varName> with a.stmt# = c.value with v.varName = pn.varName
+5 anger, 16 sleep, 17 tune, 18 time
+5000
+143 - Valid multiple with clauses query where clauses evaluate independently to false
+assign a; constant c;
+Select BOOLEAN with a.stmt# = 4 and c.value = 10 and 1 = "name"
+FALSE
+5000
+144 - Valid multiple with clauses query where clauses evaluate dependently to true
+print pn; constant c; variable v; prog_line n; procedure p;
+Select p with pn.stmt# = c.value and pn.varName = v.varName and pn.stmt# = n such that Modifies (p, v)
+main, ringAlarm
+5000
+145 - Valid multiple with clauses query where clauses evaluate dependently to false
+stmt s; assign a; if ifs; variable v; print pn;
+Select s with assign.stmt# = s.stmt# such that Parent(ifs, s) and Modifies(a, v) with v.varName = pn.varName such that Follows(pn, _)
+none
+5000
+146 - Valid multiple with clauses with such that and pattern clauses, select attribute
+call cl; procedure p, p1; variable v; while w; if ifs;
+Select cl.stmt# such that Calls(p, p1) and Modifies(p, v) pattern w(v, _) pattern ifs(v, _, _) with p1.procName = cl.procName such that Parent(w, cl)
+6
+5000
+146 - Valid multiple with clauses with such that and pattern clauses, select tuple
+if ifs; variable v; print pn; constant c; while w;
+Select <ifs, v> such that Modifies(w, v) and Modifies (ifs, v) with v.varName = pn.varName and pn.stmt# = c.value
+1 anger
+5000

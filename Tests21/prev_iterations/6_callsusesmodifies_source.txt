@@ -1,0 +1,54 @@
+procedure A {
+    while (5 == 5) { 
+        while (5 == 5) {    
+            while (5 == 5) {
+                if (5 == 5) then { 
+                    modme = used + abused;  
+                    call moreUses;          
+                } else {
+                    modme = 5;  
+                    call moreMods; 
+                }
+            }
+        }
+    }
+    while ((ca > cb) && (cc == cd)) {  
+        print a;    
+    }
+    if (ce < cf) then { 
+        yy = 5; 
+    } else {
+        jj = x * 5; 
+    }
+}
+
+procedure rootcall {    
+    call moreUses;  
+    call moreMods;  
+}
+
+procedure moreUses {    
+    print d;    
+    print e;    
+    print f;    
+    call uses;  
+}
+
+procedure uses {    
+    print a;    
+    print b;    
+    print c;    
+}
+
+procedure moreMods {    
+    read d;     
+    read e;     
+    read f;     
+    call mods;  
+}
+
+procedure mods {    
+    read a;     
+    read b;     
+    read c;     
+}

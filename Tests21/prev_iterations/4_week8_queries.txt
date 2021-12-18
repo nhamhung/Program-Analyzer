@@ -1,0 +1,165 @@
+0 - select all procedures that are called
+procedure p, q;
+Select q such that Calls(p, q)
+second, third, fourth
+5000
+1 - select all procedures which call another procedure
+procedure p, q;
+Select p such that Calls(p, q)
+first, second, fourth
+5000
+2 - select procedures called by 'first'
+procedure p;
+Select p such that Calls("first", p)
+second, fourth
+5000
+3 - select procedures which call 'second'
+procedure p;
+Select p such that Calls(p, "second")
+first, fourth
+5000
+4 - select all procedures indirectly called by 'first'
+procedure p, q;
+Select q such that Calls("first", p) such that Calls(p, q)
+second, third
+5000
+40 - select all recursive procedures
+procedure p, q;
+Select p such that Calls(p, q) such that Calls(q, p)
+none
+5000
+41 - select all recursive procedures
+procedure p, q, r;
+Select p such that Calls(p, q) such that Calls(q, r) such that Calls(r, p)
+none
+5000
+50 - select all procedures called directly or indirectly by 'first'
+procedure p;
+Select p such that Calls*("first", p)
+second, third, fourth
+5000
+51 - select all procedures called directly or indirectly by 'third'
+procedure p;
+Select p such that Calls*("third", p)
+none
+5000
+52 - select all procedures called directly or indirectly by 'third'
+procedure p;
+Select p such that Calls*("third", p)
+none
+5000
+90 - select all recursive procedures
+procedure p, q;
+Select p such that Calls*(p, q) such that Calls*(q, p)
+none
+5000
+91 - select all recursive procedures
+procedure p, q, r;
+Select p such that Calls*(p, q) such that Calls*(q, r) such that Calls*(r, p)
+none
+5000
+100 - select assign statements using pattern (wildcard LHS)
+assign a;
+Select a pattern a(_, _"b/2"_)
+1, 5
+5000
+101 - select assign statements using pattern (multiple clauses)
+assign a;
+Select a pattern a(_, _"b/2-c"_) pattern a("a", _)
+none
+5000
+150 - select boolean without clauses
+assign a;
+Select BOOLEAN
+TRUE
+5000
+151 - select boolean that should be TRUE
+assign a;
+Select BOOLEAN pattern a(_, _"b/2"_)
+TRUE
+5000
+152 - select boolean that should be FALSE
+assign a;
+Select BOOLEAN pattern a(_, _"z"_)
+FALSE
+5000
+153 - select boolean that should be TRUE (multiple clauses)
+assign a; procedure p, q;
+Select BOOLEAN pattern a(_, _"b/2"_) such that Calls("first", p) such that Calls(p, q)
+TRUE
+5000
+154 - select boolean that should be FALSE (multiple clauses, first clause false)
+assign a; procedure p, q;
+Select BOOLEAN pattern a(_, _"z"_) such that Calls("first", p) such that Calls(p, q)
+FALSE
+5000
+155 - select boolean that should be FALSE (multiple clauses, second clause false)
+assign a; procedure p, q;
+Select BOOLEAN pattern a(_, _"b/2"_) such that Calls("third", p) such that Calls(p, q)
+FALSE
+5000
+200 - select all procedures that modifies a variable
+procedure p;
+Select p such that Modifies(p, _)
+first, second, third, fourth
+5000
+201 - select all variables modified by 'first' procedure
+variable v;
+Select v such that Modifies("first", v)
+a, e, d, b, f, g
+5000
+202 - select variables modified by call stmt 2
+variable v;
+Select v such that Modifies(2, v)
+d, b, f
+5000
+203 - select variables modified by call stmt 3
+variable v;
+Select v such that Modifies(3, v)
+d, b, f, g
+5000
+250 - select all procedures that uses a variable
+procedure p;
+Select p such that Uses(p, _)
+first, second, third, fourth
+5000
+251 - select all variables used by 'third' procedure
+variable v;
+Select v such that Uses("third", v)
+f
+5000
+252 - select variables used by call stmt 2
+variable v;
+Select v such that Uses(2, v)
+b, c, a, f
+5000
+253 - select variables used by call stmt 3
+variable v;
+Select v such that Uses(3, v)
+b, c, a, f
+5000
+300 - select variables used in while statements of procedures called by 'first'
+procedure p; variable v; while w;
+Select v such that Calls("first", p) and Uses(p, v) and Uses(w, v)
+a, f
+5000
+301 - select procedures which uses and modifies variables
+procedure p;
+Select p such that Uses(p, _) and Modifies(p, _)
+first, second, third, fourth
+5000
+302 - select procedures which uses and modifies variable 'f'
+procedure p;
+Select p such that Uses(p, "f") and Modifies(p, "f")
+first, second, third, fourth
+5000
+303 - select procedures which uses and modifies variable 'a'
+procedure p;
+Select p such that Uses(p, "a") and Modifies(p, "a")
+first
+5000
+304 - select variables modified by a nested while statement
+variable v; while w; stmt s;
+Select v such that Parent(s, w) and Modifies(w, v)
+b
+5000

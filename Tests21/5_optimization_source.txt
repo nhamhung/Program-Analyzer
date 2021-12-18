@@ -1,0 +1,547 @@
+procedure P1 {
+  while (!(!(231 == f + j % i))) {
+    print i;
+    while (320 < d - c * (87)) {
+      if ((!(f <= c)) && (j <= g + b % (c))) then {
+        j = h;
+        read d;
+        read b;
+        d = f;
+        print e;
+      } else {
+        read f;
+        read a;
+        e = a;
+        call P3;
+        call P2;
+        print i;
+        a = 987 - a / (f);
+        read h;
+        print f;
+      }
+      if (!(!(b == b))) then {
+        read h;
+        print e;
+        print e;
+        print b;
+        g = g;
+        read d;
+        read b;
+        print e;
+        print e;
+      } else {
+        read e;
+        b = j;
+        read i;
+        print g;
+        read e;
+        print e;
+        print c;
+        read j;
+      }
+      h = b - 818;
+      while (!((79 != g) || (e == 294))) {
+        read i;
+        print e;
+        read d;
+        call P3;
+        e = e - d % (179);
+      }
+      d = i + 976 * f;
+    }
+    call P2;
+    while (((426 <= 838) || (f - 552 > g)) && ((602 > c) && (d + h / h > d))) {
+      while (i > f) {
+        d = c + d * 531;
+        i = 178;
+        print e;
+        read d;
+        print h;
+        print d;
+        call P3;
+        call P3;
+      }
+      print e;
+      print f;
+      while (h != f) {
+        g = i + g / d;
+      }
+    }
+    f = i - f;
+    i = 409 - 796;
+  }
+  h = g + i * (h);
+  while ((h <= a) && (b == a)) {
+    if (((c - j % (d) != d - f / (h)) || (f >= f)) && ((b <= e) || (j >= 4))) then {
+      read f;
+      if (273 <= a) then {
+        read f;
+        i = 270;
+        i = d;
+        print g;
+        call P3;
+        print g;
+        call P3;
+      } else {
+        print a;
+        read c;
+        i = d + 329 * e;
+        call P2;
+        h = c + b * a;
+        print g;
+        print d;
+        read f;
+      }
+      if (h != c) then {
+        read c;
+        print i;
+        print i;
+        print i;
+        read g;
+      } else {
+        read h;
+        read i;
+        print b;
+        read d;
+        call P3;
+        call P3;
+        print c;
+      }
+      if (934 != e - h * (864)) then {
+        print h;
+        print a;
+        read c;
+        read j;
+      } else {
+        print d;
+        print j;
+        c = g + a / (817);
+        print i;
+        b = b + i % (564);
+        print j;
+        i = i - g;
+        read a;
+      }
+      if (j == f) then {
+        print d;
+        read e;
+        call P3;
+        h = 749 + j % 389;
+        g = d + c / (344);
+      } else {
+        call P3;
+        b = g - g % b;
+        read b;
+        print f;
+        print j;
+        print f;
+      }
+      if (c < 307) then {
+        f = d;
+        print f;
+        read h;
+        read d;
+        print i;
+        j = 199 - e % (g);
+      } else {
+        read a;
+        call P2;
+      }
+      while ((d != b) && (!(c != 898))) {
+        call P3;
+      }
+      call P3;
+      print h;
+    } else {
+      if (!(368 > c)) then {
+        read a;
+        j = 135 - e % 779;
+        print j;
+        call P2;
+        f = c + h * (441);
+        j = d - f;
+      } else {
+        print b;
+        h = e;
+        d = 392;
+        read h;
+        read a;
+        h = 653;
+      }
+      read b;
+      read e;
+      d = g;
+      while (232 < g) {
+        print h;
+        read j;
+        call P3;
+        read h;
+        print i;
+        call P2;
+        read b;
+        print g;
+        call P3;
+        d = h - a % (j);
+      }
+      if (((i > 960 + 80) || (f >= 834 - a * 81)) && (c - 82 / (i) != e + j * h)) then {
+        read h;
+        print b;
+        g = h;
+        c = g;
+        read h;
+      } else {
+        f = 228 + h / (h);
+        print d;
+        print f;
+        print d;
+        print b;
+        j = c;
+        g = 332;
+      }
+      e = i + i * j;
+      while (((367 != c) || (48 >= i)) || ((f != g) || (g >= g))) {
+        read c;
+        print j;
+        i = d + i % (f);
+        print f;
+        read f;
+        e = b;
+        call P3;
+      }
+      f = h - a;
+      while (((d == a) && (b < h)) && (i > 47)) {
+        call P2;
+        call P3;
+        print i;
+        print g;
+        print f;
+        print a;
+      }
+    }
+    while ((!(b != h)) || (!(j == h))) {
+      read e;
+      b = a - 564;
+      if (((j > 722) || (e <= d)) && (h > a)) then {
+        j = a - c / (d);
+        g = b - 875;
+        read g;
+        d = f + 668;
+        print d;
+        h = j + b / (b);
+        read d;
+        c = b;
+      } else {
+        print b;
+        a = c + 446;
+        print g;
+        print j;
+        print d;
+        call P3;
+        read e;
+        e = h;
+        call P3;
+        d = 327 - 671 % 10;
+      }
+      read a;
+    }
+    if (!(!(d - c % b == c))) then {
+      while (!(a == b)) {
+        read j;
+        print h;
+        f = f - f;
+        read a;
+      }
+      read h;
+    } else {
+      print i;
+    }
+    print f;
+    b = c;
+    while (!((423 >= 76) || (b != b))) {
+      call P3;
+      read f;
+    }
+    read h;
+    if (!(e < 203)) then {
+      if ((!(j >= c)) || ((482 + 785 >= 207) && (j != h))) then {
+        read i;
+        call P3;
+        print e;
+        h = a - 164 / (j);
+        e = e + e % a;
+        call P3;
+      } else {
+        print i;
+        print c;
+        read a;
+        print a;
+        print h;
+      }
+      read f;
+      while ((!(b > f)) || (!(770 < b))) {
+        read g;
+        read i;
+        call P2;
+      }
+      read f;
+      call P2;
+    } else {
+      c = c;
+      print b;
+      print e;
+      if ((!(h - 335 * (648) < b)) || (!(h == j))) then {
+        b = g + 333 * 990;
+        read c;
+        print e;
+        read a;
+      } else {
+        a = b - i % (j);
+        d = e;
+      }
+      f = 439;
+      print c;
+      print g;
+      print g;
+    }
+  }
+  while (!(!(271 < e))) {
+    call P2;
+    print b;
+    print f;
+    print j;
+    call P2;
+    print e;
+  }
+  read d;
+}
+
+procedure P2 {
+  while (((e != h) && (a == e - 450 % (852))) || ((d < 606) || (h < 651))) {
+    read e;
+    g = i + f;
+    while (((153 < 754 + g % (70)) || (h <= d)) || (!(c + f % (301) >= b))) {
+      call P3;
+      g = d;
+      print j;
+      read g;
+      if (f < a) then {
+        d = e;
+      } else {
+        read g;
+        e = f;
+        print a;
+        h = d;
+      }
+      call P3;
+    }
+    print e;
+    read j;
+    print g;
+  }
+  while (((g >= 343) || (635 + j * (d) > c - 169 % a)) && ((408 >= d) && (i == j - 438))) {
+    i = g - c;
+    print f;
+    if (((929 - 113 % (c) > 851) || (d > 889 - d)) || ((864 > i) && (a > j + i % 675))) then {
+      e = 962 - g * (525);
+      print b;
+      while (((330 == e) && (f == 147)) && ((d < 712) || (697 == e))) {
+        d = b + 624 % d;
+        print e;
+      }
+      call P3;
+      while (c >= i) {
+        b = i;
+        read g;
+        g = g + c / d;
+        print g;
+      }
+      read e;
+      print f;
+    } else {
+      call P3;
+    }
+  }
+  while ((!(e != 127)) && ((c >= c - 988 / (j)) || (592 <= 657))) {
+    print g;
+    if (((451 != c) && (i + j / (996) == d - c * 556)) || ((659 - 91 >= c) || (579 < 135))) then {
+      h = a - i / (e);
+      while ((388 >= 275 + b / (a)) && (!(921 >= b))) {
+        print i;
+        read e;
+        read b;
+        g = c;
+        a = 799 - 385 % (c);
+        e = h;
+        read a;
+        i = i;
+      }
+      call P3;
+      c = g;
+      read i;
+      call P3;
+      print b;
+      call P3;
+    } else {
+      while (j <= j + 866) {
+        e = h + c % 202;
+        print e;
+        read f;
+        f = d;
+        j = a - 937;
+        read g;
+        i = b + j * d;
+        read b;
+        f = g;
+      }
+      if ((!(j <= i)) || (b > 339 + 434)) then {
+        h = 44 + a * (727);
+      } else {
+        read a;
+        j = a - 346 * c;
+      }
+      while (((h != d) || (770 < j)) || ((h > a - b / (785)) && (530 <= d))) {
+        c = c + a % (d);
+        read b;
+        call P3;
+      }
+      if ((e <= d) || (427 == d)) then {
+        read e;
+        print i;
+        read b;
+        call P3;
+        e = a + b / e;
+      } else {
+        print h;
+        g = i + a / e;
+        i = b;
+        j = 428 + b * f;
+        print g;
+        read h;
+        call P3;
+        read f;
+        call P3;
+        d = i - 933;
+      }
+      read j;
+      print d;
+      if ((c <= d) && (850 + 390 * 840 < g)) then {
+        d = 934;
+        print j;
+        print e;
+        print h;
+      } else {
+        g = i + e;
+        print c;
+        read d;
+        print f;
+        read a;
+        read h;
+        print e;
+        print j;
+      }
+      call P3;
+      print j;
+      if (((i >= j + 473 * (855)) && (487 == j)) || (f != j)) then {
+        read e;
+        read g;
+      } else {
+        e = c + g;
+        print e;
+        read g;
+        print g;
+        print d;
+        read j;
+      }
+    }
+    print a;
+    read d;
+    print e;
+    read a;
+    print f;
+    read i;
+    b = h + 519 / 504;
+  }
+  print f;
+  call P3;
+}
+
+procedure P3 {
+  if (((j > 224) || (j != 755)) || ((226 > c) && (e > g))) then {
+    d = 756;
+  } else {
+    while (((c < 956) && (f - g % d >= c)) && (716 < b)) {
+      print b;
+      print a;
+      print a;
+      if (!((284 < g) && (f <= h))) then {
+        read e;
+      } else {
+        print e;
+        print a;
+        d = 150;
+        g = g - 413;
+        read c;
+        print c;
+        a = h;
+        read c;
+        b = 714;
+        read j;
+      }
+      e = d;
+      read c;
+    }
+    print a;
+    while ((206 >= d) || (775 - d % (144) >= g)) {
+      if ((!(a == d)) && (!(e <= j))) then {
+        a = g + e / h;
+        f = d - e % h;
+        print g;
+        read e;
+      } else {
+        print e;
+        read h;
+        d = a + 329 / a;
+        read i;
+        d = j - 848 * i;
+        print c;
+        read b;
+        j = 797 - 206 % d;
+        print e;
+      }
+    }
+    if (((e < h) && (e < b)) && (!(e > j))) then {
+      if (a == a) then {
+        j = c;
+        print a;
+        print c;
+        print g;
+        print g;
+        print i;
+      } else {
+        e = 840 - h / i;
+        a = b + d % i;
+        print i;
+        read f;
+        print c;
+        g = e + 106 % (g);
+        read c;
+      }
+      while (((h <= h) || (g >= b)) && (606 == j + j)) {
+        read e;
+        g = 388 + b * c;
+      }
+      print g;
+      print a;
+    } else {
+      print j;
+      b = b + h;
+      read e;
+      b = f - a / g;
+    }
+    read i;
+  }
+  read h;
+  print d;
+  print b;
+  read f;
+}

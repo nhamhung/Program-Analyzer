@@ -1,0 +1,2005 @@
+1 - Declaration clause; no declarations
+
+Select word
+none
+5000
+2 - Declaration clause; too few terms
+stmt ;
+Select BOOLEAN
+none
+5000
+3 - Declaration clause; too many terms
+stmt s s1;
+Select BOOLEAN
+none
+5000
+4 - Declaration clause; invalid design entity type
+Stmt s;
+Select BOOLEAN
+none
+5000
+5 - Declaration clause; invalid synonym name
+stmt s.;
+Select BOOLEAN
+none
+5000
+6 - Declaration clause; missing semicolon
+stmt s
+Select BOOLEAN
+none
+5000
+21 - 'and' keyword; whitespace within word
+
+Select BOOLEAN such that Follows(_, _) a nd Follows(_, _)
+none
+5000
+22 - 'and' keyword; occurs after all clauses
+
+Select BOOLEAN such that Follows(_, _) and 
+none
+5000
+23 - 'and' keyword; occurs in first conditional clause
+
+Select BOOLEAN and Follows(_, _)
+none
+5000
+24 - 'and' keyword; used in addition to 'such that'
+
+Select BOOLEAN such that Follows(_, _) and such that Follows(_, _)
+none
+5000
+25 - 'and' keyword; used in addition to 'pattern'
+assign a;
+Select BOOLEAN pattern a(_, _) and pattern a(_, _)
+none
+5000
+26 - 'and' keyword; used in addition to 'with'
+
+Select BOOLEAN with 1 = 1 and with 1 = 1
+none
+5000
+27 - 'and' keyword; is used twice in a row
+
+Select BOOLEAN such that Follows(_, _) and and Follows(_, _)
+none
+5000
+28 - 'and' keyword; is missing
+
+Select BOOLEAN such that Follows(_, _) Follows(_, _)
+none
+5000
+29 - 'and' keyword; directly connects two clauses of different type
+assign a;
+Select BOOLEAN pattern a(_, _) and 1 = 1
+none
+5000
+30 - 'and' keyword; indirectly connects two clauses of different type
+
+Select BOOLEAN with 1 = 1 and 1 = 1 and Follows(_, _)
+none
+5000
+51 - General Select; invalid 'Select' phrase
+
+select BOOLEAN
+none
+5000
+52 - General Select; no space given
+
+SelectBOOLEAN
+none
+5000
+53 - General Select; additional semicolon at the end
+
+Select BOOLEAN;
+none
+5000
+54 - General Select; string selected
+
+Select "s"
+none
+5000
+55 - General Select; integer selected
+
+Select 1
+none
+5000
+61 - Select synonym; contains illegal characters
+stmt s;
+Select s.
+none
+5000
+62 - Select synonym; split into two words
+stmt s, a;
+Select s a
+none
+5000
+63 - Select synonym; starts with illegal character
+stmt s;
+Select 1s
+none
+5000
+71 - Select BOOLEAN; word is in lowercase
+
+Select boolean
+none
+5000
+72 - Select BOOLEAN; word is split in two
+
+Select BOO LEAN
+none
+5000
+73 - Select BOOLEAN; synonym following
+stmt s;
+Select BOOLEAN s
+none
+5000
+74 - Select BOOLEAN; contained within another word
+stmt s;
+Select BOOLEANs
+none
+5000
+81 - Select attribute; no period
+constant c;
+Select cvalue
+none
+5000
+82 - Select attribute; illegal chars
+constant c;
+Select c#.value
+none
+5000
+83 - Select attribute; space before period
+constant c;
+Select c .value
+none
+5000
+84 - Select attribute; space after period
+constant c;
+Select c. value
+none
+5000
+85 - Select attribute; invalid attribute type
+constant c;
+Select c.name
+none
+5000
+86 - Select attribute; space within attribute
+constant c;
+Select c.val ue
+none
+5000
+91 - Select tuple; brackets are empty
+stmt s;
+Select < >
+none
+5000
+92 - Select tuple; missing front bracket
+stmt s;
+Select s>
+none
+5000
+93 - Select tuple; missing back bracket
+stmt s;
+Select <s
+none
+5000
+94 - Select tuple; missing comma
+stmt s, s1, s2;
+Select <s, s1 s2>
+none
+5000
+95 - Select tuple; extra comma
+stmt s, s1, s2;
+Select <s, s1, s2,>
+none
+5000
+96 - Select tuple; invalid synonym in middle
+stmt s, s1, s2;
+Select <s, s3, s2>
+none
+5000
+97 - Select tuple; invalid attribute in back
+stmt s, s1, s2;
+Select <s, s1, s2.stmt>
+none
+5000
+98 - Select tuple; string in middle
+stmt s, s1, s2;
+Select <s, "s1", s2>
+none
+5000
+99 - Select tuple; integer in back
+stmt s, s1, s2;
+Select <s, s1, 2>
+none
+5000
+101 - General Such That; no space between 'such that'
+
+Select BOOLEAN suchthat Follows(_, _)
+none
+5000
+102 - General Such That; no whitespace before 'such that'
+
+Select BOOLEANsuch that Follows(_, _)
+none
+5000
+103 - General Such That; no whitespace after 'such that'
+
+Select BOOLEAN such thatFollows(_, _)
+none
+5000
+104 - General Such That; conditional clause before Select phrase
+
+such that Follows(_, _) Select BOOLEAN
+none
+5000
+105 - General Such That; non-matching design abstraction name
+
+Select BOOLEAN such that NonMatch(_, _)
+none
+5000
+106 - General Such That; space within design abstraction name
+
+Select BOOLEAN such that Foll ows(_, _)
+none
+5000
+107 - General Such That; missing left parenthesis
+
+Select BOOLEAN such that Follows_, _)
+none
+5000
+108 - General Such That; missing right parenthesis
+
+Select BOOLEAN such that Follows(_, _
+none
+5000
+109 - General Such That; missing comma in parameters
+
+Select BOOLEAN such that Follows(_ _)
+none
+5000
+121 - Follows; string in first parameter
+stmt s;
+Select BOOLEAN such that Follows("s", _)
+none
+5000
+122 - Follows; string in second parameter
+stmt s;
+Select BOOLEAN such that Follows(_, "s")
+none
+5000
+123 - Follows; float in first parameter
+stmt s;
+Select BOOLEAN such that Follows(1.0, _)
+none
+5000
+124 - Follows; float in second parameter
+stmt s;
+Select BOOLEAN such that Follows(_, 1.0)
+none
+5000
+125 - Follows; invalid integer in first parameter
+stmt s;
+Select BOOLEAN such that Follows(01, _)
+none
+5000
+126 - Follows; invalid integer in second parameter
+stmt s;
+Select BOOLEAN such that Follows(_, 01)
+none
+5000
+127 - Follows; negative integer in first parameter
+stmt s;
+Select BOOLEAN such that Follows(-1, _)
+none
+5000
+128 - Follows; negative integer in second parameter
+stmt s;
+Select BOOLEAN such that Follows(_, -1)
+none
+5000
+129 - Follows; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that Follows(s,, _)
+none
+5000
+130 - Follows; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that Follows(_, s,)
+none
+5000
+131 - Follows; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that Follows(_s, _)
+none
+5000
+132 - Follows; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that Follows(_, _s)
+none
+5000
+141 - FollowsT; whitespace before asterisk
+stmt s;
+Select BOOLEAN such that Follows *(_, _)
+none
+5000
+151 - Parent; string in first parameter
+stmt s;
+Select BOOLEAN such that Parent("s", _)
+none
+5000
+152 - Parent; string in second parameter
+stmt s;
+Select BOOLEAN such that Parent(_, "s")
+none
+5000
+153 - Parent; float in first parameter
+stmt s;
+Select BOOLEAN such that Parent(1.0, _)
+none
+5000
+154 - Parent; float in second parameter
+stmt s;
+Select BOOLEAN such that Parent(_, 1.0)
+none
+5000
+155 - Parent; invalid integer in first parameter
+stmt s;
+Select BOOLEAN such that Parent(01, _)
+none
+5000
+156 - Parent; invalid integer in second parameter
+stmt s;
+Select BOOLEAN such that Parent(_, 01)
+none
+5000
+157 - Parent; negative integer in first parameter
+stmt s;
+Select BOOLEAN such that Parent(-1, _)
+none
+5000
+158 - Parent; negative integer in second parameter
+stmt s;
+Select BOOLEAN such that Parent(_, -1)
+none
+5000
+159 - Parent; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that Parent(s,, _)
+none
+5000
+160 - Parent; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that Parent(_, s,)
+none
+5000
+161 - Parent; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that Parent(_s, _)
+none
+5000
+162 - Parent; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that Parent(_, _s)
+none
+5000
+171 - ParentT; whitespace before asterisk
+stmt s;
+Select BOOLEAN such that Parent *(_, _)
+none
+5000
+181 - Uses; integer in second parameter
+stmt s;
+Select BOOLEAN such that Uses(_, 1)
+none
+5000
+182 - Uses; float in first parameter
+stmt s;
+Select BOOLEAN such that Uses(1.0, _)
+none
+5000
+183 - Uses; float in second parameter
+stmt s;
+Select BOOLEAN such that Uses(_, 1.0)
+none
+5000
+184 - Uses; invalid integer in first parameter
+stmt s;
+Select BOOLEAN such that Uses(01, _)
+none
+5000
+185 - Uses; negative integer in first parameter
+stmt s;
+Select BOOLEAN such that Uses(-1, _)
+none
+5000
+186 - Uses; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that Uses(s-, _)
+none
+5000
+187 - Uses; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that Uses(_, s-)
+none
+5000
+188 - Uses; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that Uses(_s, _)
+none
+5000
+189 - Uses; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that Uses(_, _s)
+none
+5000
+190 - Uses; invalid synonym string in second parameter
+stmt s;
+Select BOOLEAN such that Uses(_, '1')
+none
+5000
+201 - Modifies; integer in second parameter
+stmt s;
+Select BOOLEAN such that Modifies(_, 1)
+none
+5000
+202 - Modifies; float in first parameter
+stmt s;
+Select BOOLEAN such that Modifies(1.0, _)
+none
+5000
+203 - Modifies; float in second parameter
+stmt s;
+Select BOOLEAN such that Modifies(_, 1.0)
+none
+5000
+204 - Modifies; invalid integer in first parameter
+stmt s;
+Select BOOLEAN such that Modifies(01, _)
+none
+5000
+205 - Modifies; negative integer in first parameter
+stmt s;
+Select BOOLEAN such that Modifies(-1, _)
+none
+5000
+206 - Modifies; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that Modifies(s-, _)
+none
+5000
+207 - Modifies; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that Modifies(_, s-)
+none
+5000
+208 - Modifies; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that Modifies(_s, _)
+none
+5000
+209 - Modifies; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that Modifies(_, _s)
+none
+5000
+210 - Modifies; invalid synonym string in second parameter
+stmt s;
+Select BOOLEAN such that Modifies(_, '1')
+none
+5000
+221 - Calls; integer in first parameter
+stmt s;
+Select BOOLEAN such that Calls(1, _)
+none
+5000
+222 - Calls; integer in second parameter
+stmt s;
+Select BOOLEAN such that Calls(_, 1)
+none
+5000
+223 - Calls; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that Calls(s,, _)
+none
+5000
+224 - Calls; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that Calls(_, s,)
+none
+5000
+225 - Calls; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that Calls(_s, _)
+none
+5000
+226 - Calls; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that Calls(_, _s)
+none
+5000
+227 - Calls; invalid synonym string in first parameter
+stmt s;
+Select BOOLEAN such that Calls("1", _)
+none
+5000
+228 - Calls; invalid synonym string in first parameter
+stmt s;
+Select BOOLEAN such that Calls(_, "1")
+none
+5000
+241 - CallsT; whitespace before asterisk
+stmt s;
+Select BOOLEAN such that Calls *(_, _)
+none
+5000
+251 - Next; string in first parameter
+stmt s;
+Select BOOLEAN such that Next("s", _)
+none
+5000
+252 - Next; string in second parameter
+stmt s;
+Select BOOLEAN such that Next(_, "s")
+none
+5000
+253 - Next; float in first parameter
+stmt s;
+Select BOOLEAN such that Next(1.0, _)
+none
+5000
+254 - Next; float in second parameter
+stmt s;
+Select BOOLEAN such that Next(_, 1.0)
+none
+5000
+255 - Next; invalid integer in first parameter
+stmt s;
+Select BOOLEAN such that Next(01, _)
+none
+5000
+256 - Next; invalid integer in second parameter
+stmt s;
+Select BOOLEAN such that Next(_, 01)
+none
+5000
+257 - Next; negative integer in first parameter
+stmt s;
+Select BOOLEAN such that Next(-1, _)
+none
+5000
+258 - Next; negative integer in second parameter
+stmt s;
+Select BOOLEAN such that Next(_, -1)
+none
+5000
+259 - Next; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that Next(s,, _)
+none
+5000
+260 - Next; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that Next(_, s,)
+none
+5000
+261 - Next; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that Next(_s, _)
+none
+5000
+262 - Next; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that Next(_, _s)
+none
+5000
+271 - NextT; whitespace before asterisk
+stmt s;
+Select BOOLEAN such that Next *(_, _)
+none
+5000
+281 - Affects; string in first parameter
+stmt s;
+Select BOOLEAN such that Affects("s", _)
+none
+5000
+282 - Affects; string in second parameter
+stmt s;
+Select BOOLEAN such that Affects(_, "s")
+none
+5000
+283 - Affects; float in first parameter
+stmt s;
+Select BOOLEAN such that Affects(1.0, _)
+none
+5000
+284 - Affects; float in second parameter
+stmt s;
+Select BOOLEAN such that Affects(_, 1.0)
+none
+5000
+285 - Affects; invalid integer in first parameter
+stmt s;
+Select BOOLEAN such that Affects(01, _)
+none
+5000
+286 - Affects; invalid integer in second parameter
+stmt s;
+Select BOOLEAN such that Affects(_, 01)
+none
+5000
+287 - Affects; negative integer in first parameter
+stmt s;
+Select BOOLEAN such that Affects(-1, _)
+none
+5000
+288 - Affects; negative integer in second parameter
+stmt s;
+Select BOOLEAN such that Affects(_, -1)
+none
+5000
+289 - Affects; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that Affects(s,, _)
+none
+5000
+290 - Affects; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that Affects(_, s,)
+none
+5000
+291 - Affects; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that Affects(_s, _)
+none
+5000
+292 - Affects; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that Affects(_, _s)
+none
+5000
+301 - AffectsT; whitespace before asterisk
+stmt s;
+Select BOOLEAN such that Affects *(_, _)
+none
+5000
+311 - NextBip; string in first parameter
+stmt s;
+Select BOOLEAN such that NextBip("s", _)
+none
+5000
+312 - NextBip; string in second parameter
+stmt s;
+Select BOOLEAN such that NextBip(_, "s")
+none
+5000
+313 - NextBip; float in first parameter
+stmt s;
+Select BOOLEAN such that NextBip(1.0, _)
+none
+5000
+314 - NextBip; float in second parameter
+stmt s;
+Select BOOLEAN such that NextBip(_, 1.0)
+none
+5000
+315 - NextBip; invalid integer in first parameter
+stmt s;
+Select BOOLEAN such that NextBip(01, _)
+none
+5000
+316 - NextBip; invalid integer in second parameter
+stmt s;
+Select BOOLEAN such that NextBip(_, 01)
+none
+5000
+317 - NextBip; negative integer in first parameter
+stmt s;
+Select BOOLEAN such that NextBip(-1, _)
+none
+5000
+318 - NextBip; negative integer in second parameter
+stmt s;
+Select BOOLEAN such that NextBip(_, -1)
+none
+5000
+319 - NextBip; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that NextBip(s,, _)
+none
+5000
+320 - NextBip; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that NextBip(_, s,)
+none
+5000
+321 - NextBip; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that NextBip(_s, _)
+none
+5000
+322 - NextBip; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that NextBip(_, _s)
+none
+5000
+331 - NextBipT; whitespace before asterisk
+stmt s;
+Select BOOLEAN such that NextBip *(_, _)
+none
+5000
+341 - AffectsBip; string in first parameter
+stmt s;
+Select BOOLEAN such that AffectsBip("s", _)
+none
+5000
+342 - AffectsBip; string in second parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(_, "s")
+none
+5000
+343 - AffectsBip; float in first parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(1.0, _)
+none
+5000
+344 - AffectsBip; float in second parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(_, 1.0)
+none
+5000
+345 - AffectsBip; invalid integer in first parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(01, _)
+none
+5000
+346 - AffectsBip; invalid integer in second parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(_, 01)
+none
+5000
+347 - AffectsBip; negative integer in first parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(-1, _)
+none
+5000
+348 - AffectsBip; negative integer in second parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(_, -1)
+none
+5000
+349 - AffectsBip; invalid synonym in first parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(s,, _)
+none
+5000
+350 - AffectsBip; invalid synonym in second parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(_, s,)
+none
+5000
+351 - AffectsBip; wildcard-bait synonym in first parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(_s, _)
+none
+5000
+352 - AffectsBip; wildcard-bait synonym in second parameter
+stmt s;
+Select BOOLEAN such that AffectsBip(_, _s)
+none
+5000
+361 - AffectsBipT; whitespace before asterisk
+stmt s;
+Select BOOLEAN such that AffectsBip *(_, _)
+none
+5000
+401 - General Pattern; no space before 'pattern'
+assign a;
+Select BOOLEANpattern a(_, _)
+none
+5000
+402 - General Pattern; no space after 'pattern'
+assign a;
+Select BOOLEAN patterna(_, _)
+none
+5000
+403 - General Pattern; whitespace within 'pattern'
+assign a;
+Select BOOLEAN patt ern a(_, _)
+none
+5000
+404 - General Pattern; incorrect clause ordering
+assign a;
+pattern a(_, _) Select BOOLEAN
+none
+5000
+405 - General Pattern; missing left parenthesis
+assign a;
+Select BOOLEAN pattern a _, _)
+none
+5000
+406 - General Pattern; missing right parenthesis
+assign a;
+Select BOOLEAN pattern a(_, _
+none
+5000
+407 - General Pattern; two-parameter missing comma
+assign a;
+Select BOOLEAN pattern a(_ _)
+none
+5000
+408 - General Pattern; three-parameter missing comma
+if ifs;
+Select ifs pattern ifs(_, _ _)
+none
+5000
+461 - Assign pattern; integer in first parameter
+assign a;
+Select BOOLEAN pattern a(1, _)
+none
+5000
+462 - Assign pattern; invalid synonym in first parameter
+assign a;
+Select BOOLEAN pattern a(a,, _)
+none
+5000
+463 - Assign pattern; single-apostrophe string in first parameter
+assign a;
+Select BOOLEAN pattern a('a', _)
+none
+5000
+464 - Assign pattern; wildcard-bait synonym in first parameter
+assign a;
+Select BOOLEAN pattern a(a_, _)
+none
+5000
+465 - Assign pattern; wildcard-bait synonym in second parameter
+assign a;
+Select BOOLEAN pattern a(_, a_)
+none
+5000
+466 - Assign pattern; invalid synonym string in first parameter
+assign a;
+Select BOOLEAN pattern a("1", _)
+none
+5000
+467 - Assign pattern; synonym selected in second parameter
+assign a;
+Select BOOLEAN pattern a(_, a)
+none
+5000
+468 - Assign pattern; single-apostrophe string selected in second parameter
+assign a;
+Select BOOLEAN pattern a(_, 'a')
+none
+5000
+469 - Assign pattern; integer selected in second parameter
+assign a;
+Select BOOLEAN pattern a(_, 1)
+none
+5000
+470 - Assign pattern; pattern expression missing quotes
+assign a;
+Select BOOLEAN pattern a(_, x)
+none
+5000
+471 - Assign pattern; wildcard pattern expression missing quotes
+assign a;
+Select BOOLEAN pattern a(_, _x_)
+none
+5000
+472 - Assign pattern; wildcard pattern expression missing front wildcard
+assign a;
+Select BOOLEAN pattern a(_, "x"_)
+none
+5000
+473 - Assign pattern; wildcard pattern expression missing back wildcard
+assign a;
+Select BOOLEAN pattern a(_, _"x")
+none
+5000
+474 - Assign pattern; pattern expression contains invalid synonyms
+assign a;
+Select BOOLEAN pattern a(_, "x_")
+none
+5000
+475 - Assign pattern; pattern expression contains invalid operator tokens
+assign a;
+Select BOOLEAN pattern a(_, "x $ y")
+none
+5000
+476 - Assign pattern; pattern expression contains incomplete parenthesis grouping
+assign a;
+Select BOOLEAN pattern a(_, "x * (( y + z)")
+none
+5000
+541 - If pattern; integer in first parameter
+if ifs;
+Select BOOLEAN pattern ifs(1, _, _)
+none
+5000
+542 - If pattern; invalid synonym in first parameter
+if ifs;
+Select BOOLEAN pattern ifs(ifs,, _, _)
+none
+5000
+543 - If pattern; wildcard-bait synonym in first parameter
+if ifs;
+Select BOOLEAN pattern ifs(_ifs, _, _)
+none
+5000
+544 - If pattern; wildcard-bait synonym in second parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, _ifs, _)
+none
+5000
+545 - If pattern; wildcard-bait synonym in third parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, _, _ifs)
+none
+5000
+546 - If pattern; invalid synonym string in first parameter
+if ifs;
+Select BOOLEAN pattern ifs("1", _, _)
+none
+5000
+547 - If pattern; synonym in second parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, ifs, _)
+none
+5000
+548 - If pattern; synonym in third parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, _, ifs)
+none
+5000
+549 - If pattern; integer in second parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, 1, _)
+none
+5000
+550 - If pattern; integer in third parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, _, 1)
+none
+5000
+551 - If pattern; pattern expression in second parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, "ifs", _)
+none
+5000
+552 - If pattern; pattern expression in third parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, _, "ifs")
+none
+5000
+553 - If pattern; wildcard pattern expression in second parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, _"ifs"_, _)
+none
+5000
+554 - If pattern; wildcard pattern expression in third parameter
+if ifs;
+Select BOOLEAN pattern ifs(_, _, _"ifs"_)
+none
+5000
+621 - While pattern; integer in first parameter
+while w;
+Select BOOLEAN pattern w(1, _)
+none
+5000
+622 - While pattern; invalid synonym in first parameter
+while w;
+Select BOOLEAN pattern w(w,, _)
+none
+5000
+623 - While pattern; wildcard-bait synonym in first parameter
+while w;
+Select BOOLEAN pattern w(_w, _)
+none
+5000
+624 - While pattern; wildcard-bait synonym in second parameter
+while w;
+Select BOOLEAN pattern w(_, _w)
+none
+5000
+625 - While pattern; invalid synonym string in first parameter
+while w;
+Select BOOLEAN pattern w("1", _)
+none
+5000
+626 - While pattern; synonym in second parameter
+while w;
+Select BOOLEAN pattern w(_, w)
+none
+5000
+627 - While pattern; integer in second parameter
+while w;
+Select BOOLEAN pattern w(_, 1)
+none
+5000
+701 - General With; whitespace within 'with'
+
+Select BOOLEAN wi th 1 = 1
+none
+5000
+702 - General With; no clause after 'with'
+
+Select BOOLEAN with
+none
+5000
+703 - General With; incorrect clause ordering
+
+with 1 = 1 Select BOOLEAN
+none
+5000
+704 - General With; no whitespace before 'with' 
+
+Select BOOLEANwith 1 = 1
+none
+5000
+705 - General With; no whitespace after 'with' 
+
+Select BOOLEAN with1 = 1
+none
+5000
+706 - General With; missing '=' token
+
+Select BOOLEAN with 1 1
+none
+5000
+707 - General With; extra '=' token
+
+Select BOOLEAN with 1 = = 1
+none
+5000
+801 - With parameters; left parameter has attribute called on integer
+
+Select BOOLEAN with 1.value = 1
+none
+5000
+802 - With parameters; right parameter has attribute called on integer
+
+Select BOOLEAN with 1 = 1.value
+none
+5000
+803 - With parameters; left parameter has attribute called on invalid synonym
+prog_line n;
+Select BOOLEAN with n..value = 1
+none
+5000
+804 - With parameters; right parameter has attribute called on invalid synonym
+prog_line n;
+Select BOOLEAN with 1 = n..value
+none
+5000
+805 - With parameters; left parameter has invalid attribute type
+prog_line n;
+Select BOOLEAN with n.easter = 1
+none
+5000
+806 - With parameters; right parameter has invalid attribute type
+prog_line n;
+Select BOOLEAN with 1 = n.egg
+none
+5000
+1001 - Declaration clauses; re-declared synonym; non-BOOLEAN selected
+stmt s; assign s;
+Select s
+none
+5000
+1002 - Declaration clauses; re-declared synonym; BOOLEAN selected
+stmt s; assign s;
+Select BOOLEAN
+FALSE
+5000
+1011 - Select phrase; synonym selected; undeclared synonym
+stmt s;
+Select s1
+none
+5000
+1012 - Select phrase; attribute selected; undeclared synonym
+stmt s;
+Select s1.stmt#
+none
+5000
+1013 - Select phrase; attribute selected; incorrect synonym-attribute match
+stmt s;
+Select s.value
+none
+5000
+1014 - Select phrase; tuple selected; synonym undeclared
+stmt s, s1;
+Select <s, v, s1>
+none
+5000
+1015 - Select phrase; tuple selected; incorrect synonym-attribute match
+constant c;
+Select <c, c.stmt#>
+none
+5000
+1101 - Follows; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Follows(s1, _)
+none
+5000
+1102 - Follows; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Follows(_, s1)
+none
+5000
+1103 - Follows; incorrect type in first parameter; non-BOOLEAN selected
+constant c;
+Select s such that Follows(c, _)
+none
+5000
+1104 - Follows; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that Follows(_, p)
+none
+5000
+1105 - FollowsT; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Follows*(s1, _)
+none
+5000
+1106 - FollowsT; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Follows*(_, s1)
+none
+5000
+1107 - FollowsT; incorrect type in first parameter; non-BOOLEAN selected
+constant c;
+Select s such that Follows*(c, _)
+none
+5000
+1108 - FollowsT; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that Follows*(_, p)
+none
+5000
+1111 - Parent; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Parent(s1, _)
+none
+5000
+1112 - Parent; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Parent(_, s1)
+none
+5000
+1113 - Parent; incorrect type in first parameter; non-BOOLEAN selected
+variable v;
+Select s such that Parent(v, _)
+none
+5000
+1114 - Parent; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that Parent(_, p)
+none
+5000
+1115 - ParentT; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Parent*(s1, _)
+none
+5000
+1116 - ParentT; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Parent*(_, s1)
+none
+5000
+1117 - ParentT; incorrect type in first parameter; non-BOOLEAN selected
+variable v;
+Select s such that Parent*(v, _)
+none
+5000
+1118 - ParentT; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that Parent*(_, p)
+none
+5000
+1121 - Next; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Next(s1, _)
+none
+5000
+1122 - Next; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Next(_, s1)
+none
+5000
+1123 - Next; incorrect type in first parameter; non-BOOLEAN selected
+constant c;
+Select s such that Next(c, _)
+none
+5000
+1124 - Next; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that Next(_, p)
+none
+5000
+1125 - NextT; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Next*(s1, _)
+none
+5000
+1126 - NextT; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Next*(_, s1)
+none
+5000
+1127 - NextT; incorrect type in first parameter; non-BOOLEAN selected
+constant c;
+Select s such that Next*(c, _)
+none
+5000
+1128 - NextT; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that Next*(_, p)
+none
+5000
+1131 - NextBip; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that NextBip(s1, _)
+none
+5000
+1132 - NextBip; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that NextBip(_, s1)
+none
+5000
+1133 - NextBip; incorrect type in first parameter; non-BOOLEAN selected
+variable v;
+Select s such that NextBip(v, _)
+none
+5000
+1134 - NextBip; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that NextBip(_, p)
+none
+5000
+1135 - NextBipT; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that NextBip*(s1, _)
+none
+5000
+1136 - NextBipT; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that NextBip*(_, s1)
+none
+5000
+1137 - NextBipT; incorrect type in first parameter; non-BOOLEAN selected
+variable v;
+Select s such that NextBip*(v, _)
+none
+5000
+1138 - NextBipT; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that NextBip*(_, p)
+none
+5000
+1141 - Follows; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Follows(s1, _)
+FALSE
+5000
+1142 - Follows; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Follows(_, s1)
+FALSE
+5000
+1143 - Follows; incorrect type in first parameter; BOOLEAN selected
+constant c;
+Select BOOLEAN such that Follows(c, _)
+FALSE
+5000
+1144 - Follows; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Follows(_, p)
+FALSE
+5000
+1145 - FollowsT; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Follows*(s1, _)
+FALSE
+5000
+1146 - FollowsT; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Follows*(_, s1)
+FALSE
+5000
+1147 - FollowsT; incorrect type in first parameter; BOOLEAN selected
+constant c;
+Select BOOLEAN such that Follows*(c, _)
+FALSE
+5000
+1148 - FollowsT; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Follows*(_, p)
+FALSE
+5000
+1151 - Parent; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Parent(s1, _)
+FALSE
+5000
+1152 - Parent; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Parent(_, s1)
+FALSE
+5000
+1153 - Parent; incorrect type in first parameter; BOOLEAN selected
+variable v;
+Select BOOLEAN such that Parent(v, _)
+FALSE
+5000
+1154 - Parent; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Parent(_, p)
+FALSE
+5000
+1155 - ParentT; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Parent*(s1, _)
+FALSE
+5000
+1156 - ParentT; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Parent*(_, s1)
+FALSE
+5000
+1157 - ParentT; incorrect type in first parameter; BOOLEAN selected
+variable v;
+Select BOOLEAN such that Parent*(v, _)
+FALSE
+5000
+1158 - ParentT; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Parent*(_, p)
+FALSE
+5000
+1161 - Next; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Next(s1, _)
+FALSE
+5000
+1162 - Next; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Next(_, s1)
+FALSE
+5000
+1163 - Next; incorrect type in first parameter; BOOLEAN selected
+constant c;
+Select BOOLEAN such that Next(c, _)
+FALSE
+5000
+1164 - Next; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Next(_, p)
+FALSE
+5000
+1165 - NextT; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Next*(s1, _)
+FALSE
+5000
+1166 - NextT; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Next*(_, s1)
+FALSE
+5000
+1167 - NextT; incorrect type in first parameter; BOOLEAN selected
+constant c;
+Select BOOLEAN such that Next*(c, _)
+FALSE
+5000
+1168 - NextT; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Next*(_, p)
+FALSE
+5000
+1171 - NextBip; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that NextBip(s1, _)
+FALSE
+5000
+1172 - NextBip; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that NextBip(_, s1)
+FALSE
+5000
+1173 - NextBip; incorrect type in first parameter; BOOLEAN selected
+variable v;
+Select BOOLEAN such that NextBip(v, _)
+FALSE
+5000
+1174 - NextBip; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that NextBip(_, p)
+FALSE
+5000
+1175 - NextBipT; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that NextBip*(s1, _)
+FALSE
+5000
+1176 - NextBipT; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that NextBip*(_, s1)
+FALSE
+5000
+1177 - NextBipT; incorrect type in first parameter; BOOLEAN selected
+variable v;
+Select BOOLEAN such that NextBip*(v, _)
+FALSE
+5000
+1178 - NextBipT; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that NextBip*(_, p)
+FALSE
+5000
+1201 - Affects; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Affects(s1, _)
+none
+5000
+1202 - Affects; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Affects(_, s1)
+none
+5000
+1203 - Affects; incorrect type in first parameter; non-BOOLEAN selected
+read r;
+Select s such that Affects(r, _)
+none
+5000
+1204 - Affects; incorrect type in second parameter; non-BOOLEAN selected
+print pn;
+Select s such that Affects(_, pn)
+none
+5000
+1205 - AffectsT; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Affects*(s1, _)
+none
+5000
+1206 - AffectsT; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Affects*(_, s1)
+none
+5000
+1207 - AffectsT; incorrect type in first parameter; non-BOOLEAN selected
+constant c;
+Select s such that Affects*(c, _)
+none
+5000
+1208 - AffectsT; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that Affects*(_, p)
+none
+5000
+1211 - AffectsBip; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that AffectsBip(s1, _)
+none
+5000
+1212 - AffectsBip; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that AffectsBip(_, s1)
+none
+5000
+1213 - AffectsBip; incorrect type in first parameter; non-BOOLEAN selected
+read r;
+Select s such that AffectsBip(r, _)
+none
+5000
+1214 - AffectsBip; incorrect type in second parameter; non-BOOLEAN selected
+print pn;
+Select s such that AffectsBip(_, pn)
+none
+5000
+1215 - AffectsBipT; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that AffectsBip*(s1, _)
+none
+5000
+1216 - AffectsBipT; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that AffectsBip*(_, s1)
+none
+5000
+1217 - AffectsBipT; incorrect type in first parameter; non-BOOLEAN selected
+constant c;
+Select s such that AffectsBip*(c, _)
+none
+5000
+1218 - AffectsBipT; incorrect type in second parameter; non-BOOLEAN selected
+procedure p;
+Select s such that AffectsBip*(_, p)
+none
+5000
+1221 - Affects; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Affects(s1, _)
+FALSE
+5000
+1222 - Affects; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Affects(_, s1)
+FALSE
+5000
+1223 - Affects; incorrect type in first parameter; BOOLEAN selected
+read r;
+Select BOOLEAN such that Affects(r, _)
+FALSE
+5000
+1224 - Affects; incorrect type in second parameter; BOOLEAN selected
+print pn;
+Select BOOLEAN such that Affects(_, pn)
+FALSE
+5000
+1225 - AffectsT; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Affects*(s1, _)
+FALSE
+5000
+1226 - AffectsT; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Affects*(_, s1)
+FALSE
+5000
+1227 - AffectsT; incorrect type in first parameter; BOOLEAN selected
+constant c;
+Select BOOLEAN such that Affects*(c, _)
+FALSE
+5000
+1228 - AffectsT; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Affects*(_, p)
+FALSE
+5000
+1231 - AffectsBip; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that AffectsBip(s1, _)
+FALSE
+5000
+1232 - AffectsBip; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that AffectsBip(_, s1)
+FALSE
+5000
+1233 - AffectsBip; incorrect type in first parameter; BOOLEAN selected
+read r;
+Select BOOLEAN such that AffectsBip(r, _)
+FALSE
+5000
+1234 - AffectsBip; incorrect type in second parameter; BOOLEAN selected
+print pn;
+Select BOOLEAN such that AffectsBip(_, pn)
+FALSE
+5000
+1235 - AffectsBipT; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that AffectsBip*(s1, _)
+FALSE
+5000
+1236 - AffectsBipT; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that AffectsBip*(_, s1)
+FALSE
+5000
+1237 - AffectsBipT; incorrect type in first parameter; BOOLEAN selected
+constant c;
+Select BOOLEAN such that AffectsBip*(c, _)
+FALSE
+5000
+1238 - AffectsBipT; incorrect type in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that AffectsBip*(_, p)
+FALSE
+5000
+1251 - Calls; undeclared synonym in first parameter; non-BOOLEAN selected
+procedure p;
+Select p such that Calls(s1, _)
+none
+5000
+1252 - Calls; undeclared synonym in second parameter; non-BOOLEAN selected
+procedure p;
+Select p such that Calls(_, s1)
+none
+5000
+1253 - Calls; incorrect type in first parameter; non-BOOLEAN selected
+read r; procedure p;
+Select p such that Calls(r, _)
+none
+5000
+1254 - Calls; incorrect type in second parameter; non-BOOLEAN selected
+print pn; procedure p;
+Select p such that Calls(_, pn)
+none
+5000
+1255 - CallsT; undeclared synonym in first parameter; non-BOOLEAN selected
+procedure p;
+Select p such that Calls*(s1, _)
+none
+5000
+1256 - CallsT; undeclared synonym in second parameter; non-BOOLEAN selected
+procedure p;
+Select p such that Calls*(_, s1)
+none
+5000
+1257 - CallsT; incorrect type in first parameter; non-BOOLEAN selected
+constant c; procedure p;
+Select p such that Calls*(c, _)
+none
+5000
+1258 - CallsT; incorrect type in second parameter; non-BOOLEAN selected
+print pn; procedure p;
+Select p such that Calls*(_, pn)
+none
+5000
+1261 - Calls; undeclared synonym in first parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Calls(s1, _)
+FALSE
+5000
+1262 - Calls; undeclared synonym in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Calls(_, s1)
+FALSE
+5000
+1263 - Calls; incorrect type in first parameter; BOOLEAN selected
+read r;
+Select BOOLEAN such that Calls(r, _)
+FALSE
+5000
+1264 - Calls; incorrect type in second parameter; BOOLEAN selected
+print pn;
+Select BOOLEAN such that Calls(_, pn)
+FALSE
+5000
+1265 - CallsT; undeclared synonym in first parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Calls*(s1, _)
+FALSE
+5000
+1266 - CallsT; undeclared synonym in second parameter; BOOLEAN selected
+procedure p;
+Select BOOLEAN such that Calls*(_, s1)
+FALSE
+5000
+1267 - CallsT; incorrect type in first parameter; BOOLEAN selected
+constant c;
+Select BOOLEAN such that Calls*(c, _)
+FALSE
+5000
+1268 - CallsT; incorrect type in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Calls*(_, s)
+FALSE
+5000
+1301 - Uses; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Uses(s1, _)
+none
+5000
+1302 - Uses; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Uses(s, s1)
+none
+5000
+1303 - Uses; incorrect type in first parameter; non-BOOLEAN selected
+read r;
+Select s such that Uses(r, _)
+none
+5000
+1304 - Uses; incorrect type in second parameter; non-BOOLEAN selected
+print pn; stmt s;
+Select s such that Uses(s, pn)
+none
+5000
+1305 - Uses; wildcard in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Uses(_, _)
+none
+5000
+1311 - Modifies; undeclared synonym in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Modifies(s1, _)
+none
+5000
+1312 - Modifies; undeclared synonym in second parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Modifies(s, s1)
+none
+5000
+1313 - Modifies; incorrect type in first parameter; non-BOOLEAN selected
+print pn;
+Select s such that Modifies(pn, _)
+none
+5000
+1314 - Modifies; incorrect type in second parameter; non-BOOLEAN selected
+print pn; stmt s;
+Select s such that Modifies(s, pn)
+none
+5000
+1315 - Modifies; wildcard in first parameter; non-BOOLEAN selected
+stmt s;
+Select s such that Modifies(_, _)
+none
+5000
+1321 - Uses; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Uses(s1, _)
+FALSE
+5000
+1322 - Uses; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Uses(s, s1)
+FALSE
+5000
+1323 - Uses; incorrect type in first parameter; BOOLEAN selected
+read r;
+Select BOOLEAN such that Uses(r, _)
+FALSE
+5000
+1324 - Uses; incorrect type in second parameter; BOOLEAN selected
+print pn; stmt s;
+Select BOOLEAN such that Uses(s, pn)
+FALSE
+5000
+1325 - Uses; wildcard in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Uses(_, _)
+FALSE
+5000
+1331 - Modifies; undeclared synonym in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Modifies(s1, _)
+FALSE
+5000
+1332 - Modifies; undeclared synonym in second parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Modifies(s, s1)
+FALSE
+5000
+1333 - Modifies; incorrect type in first parameter; BOOLEAN selected
+print pn;
+Select BOOLEAN such that Modifies(pn, _)
+FALSE
+5000
+1334 - Modifies; incorrect type in second parameter; BOOLEAN selected
+print pn; stmt s;
+Select BOOLEAN such that Modifies(s, pn)
+FALSE
+5000
+1335 - Modifies; wildcard in first parameter; BOOLEAN selected
+stmt s;
+Select BOOLEAN such that Modifies(_, _)
+FALSE
+5000
+1401 - General Pattern; undeclared syn synonym; non-BOOLEAN selected
+stmt s;
+Select s pattern x(_, _)
+none
+5000
+1402 - General Pattern; undeclared syn synonym; BOOLEAN selected
+stmt s;
+Select BOOLEAN pattern x(_, _)
+FALSE
+5000
+1403 - General Pattern; syn is of incorrect type; non-BOOLEAN selected
+stmt s;
+Select s pattern s(_, _)
+none
+5000
+1404 - General Pattern; syn is of incorrect type; BOOLEAN selected
+stmt s;
+Select BOOLEAN pattern s(_, _)
+FALSE
+5000
+1451 - Assign pattern; undeclared synonym in first parameter; non-BOOLEAN selected
+assign a;
+Select a pattern a(v, _)
+none
+5000
+1452 - Assign pattern; undeclared synonym in first parameter; BOOLEAN selected
+assign a;
+Select BOOLEAN pattern a(v, _)
+FALSE
+5000
+1453 - Assign pattern; incorrect type in first parameter; non-BOOLEAN selected
+assign a; stmt s;
+Select a pattern a(s, _)
+none
+5000
+1454- Assign pattern; incorrect type in first parameter; BOOLEAN selected
+assign a; stmt s;
+Select BOOLEAN pattern a(s, _)
+FALSE
+5000
+1501 - If pattern; undeclared synonym in first parameter; non-BOOLEAN selected
+if ifs;
+Select ifs pattern ifs(v, _, _)
+none
+5000
+1502 - If pattern; undeclared synonym in first parameter; BOOLEAN selected
+if ifs;
+Select BOOLEAN pattern ifs(v, _, _)
+FALSE
+5000
+1503 - If pattern; incorrect type in first parameter; non-BOOLEAN selected
+if ifs; stmt s;
+Select ifs pattern ifs(s, _, _)
+none
+5000
+1504- If pattern; incorrect type in first parameter; BOOLEAN selected
+if ifs; stmt s;
+Select BOOLEAN pattern ifs(s, _, _)
+FALSE
+5000
+1551 - While pattern; undeclared synonym in first parameter; non-BOOLEAN selected
+while w;
+Select w pattern w(v, _)
+none
+5000
+1552 - While pattern; undeclared synonym in first parameter; BOOLEAN selected
+while w;
+Select BOOLEAN pattern w(v, _)
+FALSE
+5000
+1553 - While pattern; incorrect type in first parameter; non-BOOLEAN selected
+while w; stmt s;
+Select w pattern w(s, _)
+none
+5000
+1554- While pattern; incorrect type in first parameter; BOOLEAN selected
+while w; stmt s;
+Select BOOLEAN pattern w(s, _)
+FALSE
+5000
+1555 - While pattern; pattern expression in second parameter; non-BOOLEAN selected
+while w;
+Select w pattern w(_, "w")
+none
+5000
+1556 - While pattern; pattern expression in second parameter; BOOLEAN selected
+while w;
+Select BOOLEAN pattern w(_, "w")
+FALSE
+5000
+1557 - While pattern; wildcard pattern expression in second parameter; non-BOOLEAN selected
+while w;
+Select w pattern w(_, _"w"_)
+none
+5000
+1558 - While pattern; wildcard pattern expression in second parameter; BOOLEAN selected
+while w;
+Select BOOLEAN pattern w(_, _"w"_)
+FALSE
+5000
+1701 - With Terms; undeclared synonym in first parameter; non-BOOLEAN selected
+prog_line n;
+Select n with x = 1
+none
+5000
+1702 - With Terms; undeclared synonym in second parameter; non-BOOLEAN selected
+prog_line n;
+Select n with 1 = x
+none
+5000
+1703 - With Terms; undeclared synonym in attribute of first parameter; non-BOOLEAN selected
+prog_line n;
+Select n with x.stmt# = 1
+none
+5000
+1704 - With Terms; undeclared synonym in attribute of second parameter; non-BOOLEAN selected
+prog_line n;
+Select n with 1 = x.stmt#
+none
+5000
+1705 - With Terms; incorrect synonym type in attribute of first parameter; non-BOOLEAN selected
+prog_line n;
+Select n with n.value = 1
+none
+5000
+1706 - With Terms; incorrect synonym type in attribute of second parameter; non-BOOLEAN selected
+prog_line n;
+Select n with 1 = n.value
+none
+5000
+1707 - With Terms; synonym used in first parameter is not prog_line; non-BOOLEAN selected
+stmt s;
+Select s with s = 1
+none
+5000
+1708 - With Terms; synonym used in second parameter is not prog_line; non-BOOLEAN selected
+stmt s;
+Select s with 1 = s
+none
+5000
+1711 - With Terms; undeclared synonym in first parameter; BOOLEAN selected
+prog_line n;
+Select BOOLEAN with x = 1
+FALSE
+5000
+1712 - With Terms; undeclared synonym in second parameter; BOOLEAN selected
+prog_line n;
+Select BOOLEAN with 1 = x
+FALSE
+5000
+1713 - With Terms; undeclared synonym in attribute of first parameter; BOOLEAN selected
+prog_line n;
+Select BOOLEAN with x.stmt# = 1
+FALSE
+5000
+1714 - With Terms; undeclared synonym in attribute of second parameter; BOOLEAN selected
+prog_line n;
+Select BOOLEAN with 1 = x.stmt#
+FALSE
+5000
+1715 - With Terms; incorrect synonym type in attribute of first parameter; BOOLEAN selected
+prog_line n;
+Select BOOLEAN with n.value = 1
+FALSE
+5000
+1716 - With Terms; incorrect synonym type in attribute of second parameter; BOOLEAN selected
+prog_line n;
+Select BOOLEAN with 1 = n.value
+FALSE
+5000
+1717 - With Terms; synonym used in first parameter is not prog_line; BOOLEAN selected
+stmt s;
+Select BOOLEAN with s = 1
+FALSE
+5000
+1718 - With Terms; synonym used in second parameter is not prog_line; BOOLEAN selected
+stmt s;
+Select BOOLEAN with 1 = s
+FALSE
+5000
+1801 - With Combinations; type combination is integer vs string; non-BOOLEAN selected
+prog_line n;
+Select n with 1 = "n"
+none
+5000
+1802 - With Combinations; type combination is attribute-string vs integer; non-BOOLEAN selected
+procedure p;
+Select p with p.procName = 1
+none
+5000
+1803 - With Combinations; type combination is attribute-integer vs string; non-BOOLEAN selected
+constant c;
+Select c with c.value = "c"
+none
+5000
+1804 - With Combinations; type combination is attribute-string vs attribute-integer; non-BOOLEAN selected
+assign a; variable v;
+Select a with v.varName = a.stmt#
+none
+5000
+1851 - With Combinations; type combination is integer vs string; BOOLEAN selected
+prog_line n;
+Select BOOLEAN with 1 = "n"
+FALSE
+5000
+1852 - With Combinations; type combination is attribute-string vs integer; BOOLEAN selected
+procedure p;
+Select BOOLEAN with p.procName = 1
+FALSE
+5000
+1853 - With Combinations; type combination is attribute-integer vs string; BOOLEAN selected
+constant c;
+Select BOOLEAN with c.value = "c"
+FALSE
+5000
+1854 - With Combinations; type combination is attribute-string vs attribute-integer; BOOLEAN selected
+assign a; variable v;
+Select BOOLEAN with v.varName = a.stmt#
+FALSE
+5000
+2000 - Multiple such that clauses
+assign a, a1; variable v;
+Select BOOLEAN such that Follows(v, a) and Follows(a, a1)
+FALSE
+5000

@@ -1,0 +1,8 @@
+procedure CondExprCannotHaveArbitraryParentheses {
+  while ((1) == (1)) {
+    IsAboveCondExprValid = 1;
+  }
+  while ((1 == 1)) {
+    IsAboveCondExprValid = 0;
+  }
+}

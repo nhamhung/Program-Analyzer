@@ -1,0 +1,480 @@
+1 - Find assignments assigned to variable 'v6' in a loop, that can be reached from statement #1
+assign a; if ifs;
+Select a pattern a("v6", _) such that Parent*(ifs, a) and Next*(1, a) and Uses(a, "v3")
+7
+5000
+2 - Find program lines that can be executed between line #2 and #7
+prog_line n;
+Select n such that Next*(2, n) and Next*(n, 7)
+3, 4
+5000
+3 - Find procedures which are called from 'P4' in a while loop
+procedure p; call c; while w;
+Select p such that Calls("P4", p) and Parent*(w, c) with c.procName = p.procName
+P1, P2
+5000
+4 - Find procedures directly and indirectly call procedure 'P1' and modifies 'v10'
+procedure p, q;
+Select p such that Calls*(p, q) with q.procName = "P1" such that Modifies(p, "v10")
+P3, P4, P5, P6
+5000
+5 - Find whether there is an execution path from statement #89 to #84
+
+Select BOOLEAN such that Next*(89, 84)
+FALSE
+5000
+6 - Find whether there is an execution path from statement #78 to statement #89 that passes through #77
+
+Select BOOLEAN such that Next*(78, 77) and Next*(77, 89)
+TRUE
+5000
+7 - Find all pairs of procedures p and q such that p Calls* q
+procedure p, q;
+Select <p, q> such that Calls*(p, q)
+P3 P1, P4 P1, P4 P2, P5 P4, P5 P2, P5 P1, P6 P3, P6 P1
+5000
+8 - Find all instances of triple nested while loops in the program
+while w1, w2, w3;
+Select <w1, w2, w3> such that Parent*(w1, w2) and Parent*(w2, w3)
+49 51 53, 160 162 163, 160 162 167, 160 163 167, 162 163 167
+5000
+9 - Find all while statements with 'v8' as a control variable and directly contains a call statement which calls a procedure that modifies variable 'v10'
+if ifs; call c; procedure p;
+Select ifs pattern ifs("v8", _, _) such that Parent(ifs, c) and Modifies(p, "v10") with c.procName = p.procName
+41
+5000
+10 - Find all assignments to variable 'v2' such that value of 'v10' is subsequently re-assigned recursively in an assign statement nested inside two loops
+assign a1, a2; while w; if ifs;
+Select a2 pattern a1("v2", _) and a2("v2", _"v2"_) such that Affects(a1, a2) and Parent*(w, a2) and Parent*(ifs, w)
+97, 96
+5000
+11 - Find whether there is an execution path from statement #48 to statement #75 that passes through #59
+
+Select BOOLEAN such that Next*(48, 59) and Next*(59, 75)
+TRUE
+5000
+12 - Find all reachable statements from statement #61
+stmt s;
+Select s such that Next*(61, s)
+62, 63, 64, 65, 66, 67, 68, 69, 74, 75
+5000
+13 - Find all variables used by the outermost while loop in a triple nest loop
+variable v; while w1, w2, w3;
+Select v such that Uses(w3, v) and Parent(w2, w1) and Parent(w3, w2)
+v6, v10, v7, v9, v8, v2, v5, v4
+5000
+14 - Find all assignments with pattern 'v8' and modifies variable 'v6' inside some if statements that has variable 'v7'
+if ifs; assign a;
+Select a such that Parent(ifs, a) and Uses(a, "v8") and Uses(a, "v10") pattern ifs("v7", _, _) and a("v6", _"v8"_)
+5, 7
+5000
+15 - Find all variables which are used in conditional block of both some if and while statement and while is directly nested within if
+if ifs; while w; variable v;
+Select <ifs, w, v> pattern ifs(v, _, _) and w(v, _) such that Parent(ifs, w)
+131 148 v10, 131 148 v6, 35 39 v4, 56 57 v3
+5000
+16 - Find all assignments such that its statement number is a constant in the program
+constant c; assign a;
+Select <a, c> with a.stmt# = c.value
+7 7, 96 96, 40 40, 1 1, 5 5, 104 104, 54 54
+5000
+17 - Find all assign statements in between an execution path from 18 to 69
+assign a;
+Select a such that Next*(18, a) and Next*(a, 69)
+32, 50, 54, 61, 62, 66
+5000
+18 - Find all assign statements in between an execution path from 18 to 69 that stmt# 50 Affects
+assign a;
+Select a such that Next*(18, a) and Next*(a, 69) and Affects(50, a)
+50, 54, 61, 62
+5000
+19 - Find all pair of variable and assignment combined that satisfies all conditions
+assign a; if ifs; while w; variable v; constant c; procedure p;
+Select <v, a> such that Next*(18, a) and Next*(a, 75) and Affects(40, a) pattern ifs(v, _, _) and w(v, _) and a("v1", _) with a.stmt# = c.value
+v1 40, v2 40, v3 40, v4 40, v6 40, v7 40, v8 40, v9 40, v10 40, v5 40
+5000
+20 - Find all assign statements which modifies and uses the same variable
+assign a; variable v; if ifs;
+Select a such that Modifies(a, v) and Uses(a, v) and Parent*(ifs, a) pattern ifs("v6", _, _)
+7, 40, 50, 62, 133, 138, 150
+5000
+21 - Find NextBip statements of statement #8 such that those statements are nested under both some if and while statements
+prog_line n; if ifs; while w;
+Select n such that NextBip(8, n) and Parent*(ifs, n) and Parent*(w, n)
+45
+5000
+22 - Find all assign statements that are NextBip* to 98 and modifies 'v8' and uses 'v9'
+assign a;
+Select a such that NextBip*(98, a) and Modifies(a, "v8") and Uses(a, "v9") pattern a("v8", _"v9"_)
+80, 81
+5000
+23 - Find all while statements on NextBip execution path from stmt #76 such that it contains some read statements
+while w; read r; assign a;
+Select w such that NextBip*(76, w) and Parent*(w, r)
+77, 85, 12, 92
+5000
+24 - Find all if statements on NextBip execution path from stmt #76 such that it uses variable 'v8' in conditional block and uses 'v2'
+if ifs;
+Select ifs such that NextBip*(76, ifs) pattern ifs("v8", _, _) such that Uses(ifs, "v2")
+4, 11, 79, 86, 90
+5000
+25 - Find whether there are some assign statements which are Affected by statement 76
+assign a;
+Select BOOLEAN such that Affects*(76, a) and Affects*(80, 81) and Affects*(76, 96) and Affects(76, 96) and Affects(80, 81)
+TRUE
+5000
+26 - Find previous statements of stmt #106 and PreviousBip statement of stmt #110
+stmt s; prog_line n;
+Select <s, n> such that Next(s, 106) and NextBip(n, 110)
+105 74, 112 74, 118 74, 117 74
+5000
+27 - Find all pairs of Affects assign statements from line #103 onwards
+assign a1, a2;
+Select <a1, a2> such that Affects(a1, a2) and Next*(103, a1)
+104 105, 104 119, 105 107, 105 108, 105 119, 105 120, 107 108, 111 112, 112 108, 113 114, 114 116, 119 120, 119 121, 120 121
+5000
+28 - Find all pairs of Affects* assign statements from line #103 onwards
+assign a1, a2;
+Select <a1, a2> such that Affects*(a1, a2) and Next*(103, a1)
+104 105, 104 107, 104 108, 104 119, 104 120, 104 121, 105 107, 105 108, 105 119, 105 120, 105 121, 107 108, 111 108, 111 112, 112 108, 113 114, 113 116, 114 116, 119 120, 119 121, 120 121
+5000
+29 - Find all assign statements NextBip* to 108 which modifies variable 'v4' and is directly nested inside an if statement
+assign a; if ifs;
+Select a such that NextBip*(108, a) and Parent(ifs, a) and Uses(a, "v4")
+32, 47, 118
+5000
+30 - Find all assign statements NextBips to 108 which is directly or indirectly nested inside some while statement that modifes and uses the same variable
+assign a; while w; variable v;
+Select a such that NextBip*(108, a) and Parent*(w, a) and Modifies(a, v) and Uses(a, v)
+40, 50, 108
+5000
+31 - Find all variables modified by some read statements which are NextBip* to 108 and follows a print statement
+variable v; read r; print p;
+Select v such that NextBip*(108, r) and Modifies(r, v) and Next(p, r)
+v2, v3
+5000
+32 - Find all pairs of print statement and variable used which are NextBip* to 108 and follows a read statement both are directly or indirectly nested under both if and while statement
+variable v; read r; print p; if ifs; while w;
+Select <p, v> such that NextBip*(108, p) and Next(r, p) and Parent*(ifs, p) and Parent*(w, p) and Uses(p, v)
+22 v6
+5000
+33 - Find all constants which has the same value with some statement number, all other clauses evaluate to True
+while w1, w2, w3; if if1, if2; assign a; constant c; stmt s;
+Select c with c.value = s.stmt# such that Calls("P6", "P3") and Calls*("P6", "P1") and Parent(if1, if2) and Parent(if2, w1) and Parent(w1, w2) and Parent(w2, w3) and Parent(w3, 54) and Next(w3,51) and Next*(w3, 49) and Parent(w3, a) pattern a("v8", _"v10"_)
+7, 40, 11, 71, 96, 34, 86, 51, 29, 9, 12, 2, 1, 20, 30, 3, 5, 104, 110, 137, 147, 151, 154, 54, 172, 173
+5000
+34 - Find all pairs of assign statements which are both NextBip and AffectsBip to each other
+assign a1, a2;
+Select <a1, a2> such that NextBip(a1, a2) and AffectsBip(a1, a2)
+104 105, 107 108, 111 112, 113 114, 119 120, 120 121, 80 81, 96 97
+5000
+35 - Select all while, statement, assignment, variable tuples that satisfy all conditions
+while w; print pn; stmt s; variable v, v1; assign a, a1;
+Select <w, s, a1, v1> such that Parent*(w, s) and Uses(s, v) and Affects(s, a) and Next*(s, pn) and Uses(pn, "v2") and Next*(27, a1) and Modifies(a1, v1) and Uses(a1, "v5")
+77 80 50 v10, 77 80 75 v2, 123 128 50 v10, 123 128 75 v2, 132 133 50 v10, 132 133 75 v2
+5000
+36 - Find all assign statements deeply nested in 4 levels of ifs and directly nested in the last layer, query tuple
+if if1, if2, if3, if4; assign a;
+Select <if1, if2, if3, if4, a> such that Parent*(if1, if2) and Parent*(if2, if3) and Parent*(if3, if4) and Parent(if4, a)
+131 134 135 136 138, 34 48 55 56 61, 34 48 55 56 62, 34 48 55 63 66
+5000
+37 - Find all assign statements deeply nested in 3 levels of ifs and directly or indirectly nested in the last layer that Affects some other assign statement, query tuple
+if if1, if2, if3; assign a, a1;
+Select <if1, if2, if3, a, a1> such that Parent*(if1, if2) and Parent*(if2, if3) and Parent*(if3, a) and Affects(a, a1)
+34 48 55 62 75, 34 48 56 62 75, 34 55 56 62 75, 48 55 56 62 75
+5000
+38 - Find all assign statements deeply nested in 3 levels of ifs and directly or indirectly nested in 1 level of while that Affects some other assign statement, query tuple
+while w1, w2, w3; assign a, a1;
+Select <w1, w2, w3, a, a1> such that Parent*(w1, w2) and Parent*(w2, w3) and Parent*(w3, a) and Affects(a, a1)
+49 51 53 54 50
+5000
+39 - Find all pair of assign statements nested in 3 levels if, if, while and a Affects* a1
+if if1, if2; while w; assign a, a1;
+Select <a, a1> such that Parent*(if1, if2) and Parent*(if2, w) and Parent*(w, a) and Affects*(a, a1)
+40 40, 40 47, 40 75, 50 50, 50 54, 50 61, 50 62, 50 75, 54 50, 54 54, 54 61, 54 62, 54 75
+5000
+40 - Find all assign statements which statement #122 Affect* and it is nested within some if and while statements
+assign a; if ifs; while w;
+Select a such that Affects*(122, a) and Parent*(ifs, a) and Parent*(w, a)
+128, 133, 150, 152
+5000
+200 - Find all assign statements affected by statement 40 across procedures
+assign a;
+Select a such that AffectsBip(40, a)
+40, 47, 7, 119
+5000
+201 - Find all assign statements affected by statement 40 across procedures and are in a while loop directly
+assign a; while w;
+Select a such that AffectsBip(40, a) and Parent(w, a)
+40
+5000
+202 - Find all assign statements affected by statement 40 across procedures that uses a variable that appears in the while loop it resides in directly or indirectly
+assign a; while w; variable v;
+Select a such that AffectsBip(40, a) and Parent*(w, a) and Uses(40, v) pattern w(v, _)
+40
+5000
+203 - Find all assign statements that affects statement 120 across procedures
+assign a;
+Select a such that AffectsBip(a, 120)
+119, 75, 105
+5000
+204 - Find all assign statements that affects statement 120 across procedures and follows an assignment
+assign a, a1;
+Select a such that AffectsBip(a, 120) and Follows(a1, a)
+105
+5000
+205 - Find all assign statements that affects statement 120 across procedures and is in a while loop
+assign a; while w;
+Select a such that AffectsBip(a, 120) and Parent(w, a)
+75
+5000
+206 - All assign statements affected by 101 across procedures
+assign a;
+Select a such that AffectsBip(101, a)
+76, 81, 89, 16, 1
+5000
+206 - All assign statements affected by 101 across procedures in double nested containers
+assign a; stmt s, s1;
+Select a such that AffectsBip(101, a) and Parent(s, a) and Parent(s1, s)
+81
+5000
+207 - All assign statements that affect another statement and uses and modifies the same variable
+variable v; assign a;
+Select <a, v> such that AffectsBip(a, _) and Uses(a, v) and Modifies(a, v)
+101 v4,108 v3,128 v10,133 v10,32 v3,40 v1,50 v10,62 v10,7 v6,81 v8,96 v2,97 v2
+5000
+208 - All assign statements that affect another statement and uses and modifies the same variable and is contained in a while that uses that variable in its cond exp
+variable v; assign a; while w;
+Select <a, v> such that AffectsBip(a, _) and Uses(a, v) and Modifies(a, v) and Parent*(w, a) pattern w(v, _)
+108 v3,128 v10
+5000
+209 - All assign statements that affect another statement and uses and modifies the same variable and is contained in a if that uses that variable in its cond exp
+variable v; assign a; if ifs ;
+Select <a, v> such that AffectsBip(a, _) and Uses(a, v) and Modifies(a, v) and Parent*(ifs, a) pattern ifs(v, _, _)
+133 v10,32 v3,40 v1,62 v10,7 v6,81 v8
+5000
+210 - Find whether AffectsBip 98 and 81 is True
+
+Select BOOLEAN such that AffectsBip(98, 81)
+TRUE
+5000
+211 - Find all affectsbip* statements affected by statement 101 across procedures
+assign a;
+Select a such that AffectsBip*(101, a)
+1, 16, 5, 7, 76, 80, 81, 89, 96, 97
+5000
+212 - Find all affectsbip* pairs where the affected statement uses and modifies the same variable
+assign a1, a2; variable v;
+Select <a1, a2> such that AffectsBip*(a1, a2) and Uses(a2, v) and Modifies(a2, v)
+1 108,1 32,1 40,1 50,1 62,1 7,1 81,101 7,101 81,101 96,101 97,104 108,104 32,104 40,104 50,104 62,104 7,105 108,105 32,105 40,105 50,105 62,105 7,107 108,107 32,107 40,107 50,107 62,107 7,108 108,108 32,108 40,108 50,108 62,108 7,111 108,111 32,111 40,111 50,111 62,111 7,112 108,112 32,112 40,112 50,112 62,112 7,113 108,113 32,113 40,113 50,113 62,113 7,114 108,114 32,114 40,114 50,114 62,114 7,116 108,116 32,116 40,116 50,116 62,116 7,117 108,117 32,117 40,117 50,117 62,117 7,118 108,118 32,118 40,118 50,118 62,118 7,122 128,122 133,122 138,122 150,128 128,128 133,128 138,128 150,133 133,133 138,152 150,32 108,32 32,32 40,32 50,32 62,32 7,40 108,40 32,40 40,40 50,40 62,40 7,47 108,47 32,47 40,47 50,47 62,47 7,5 108,5 32,5 40,5 50,5 62,5 7,5 81,50 108,50 32,50 40,50 50,50 62,50 7,54 108,54 32,54 40,54 50,54 62,54 7,61 108,61 32,61 40,61 50,61 62,61 7,62 108,62 32,62 40,62 50,62 62,62 7,66 108,66 32,66 40,66 50,66 62,66 7,7 108,7 32,7 40,7 50,7 62,7 7,7 81,75 108,75 32,75 40,75 50,75 62,75 7,76 96,76 97,80 7,80 81,81 7,81 81,96 96,96 97,97 96,97 97,98 101,98 7,98 81,98 96,98 97
+5000
+213 - Find all affectsbip* statements affected by statement 101 across procedures and is contained in a while loop directly or indirectly
+assign a; while w;
+Select a such that AffectsBip*(101, a) and Parent*(w, a)
+80, 81, 89, 96, 97
+5000
+214 - Find all affectsbip* statements affected by statement 101 across procedures and is contained in a if loop indirectly
+assign a; if ifs; stmt s;
+Select a such that AffectsBip*(101, a) and Parent*(ifs, s) and Parent(s, a)
+96, 97
+5000
+215 - Find all assign statements that affected by statement 101 across procedures and follows an assignment
+assign a, a1;
+Select a such that AffectsBip*(101, a) and Follows(a1, a)
+81, 97
+5000
+41 - Next: outer most while descends properly and moves to next stmt on same level
+stmt s;
+Select s such that Next(160, s)
+161, 181
+5000
+42 - Next: normal stmt to while container on same level
+stmt s;
+Select s such that Next(161, s)
+162
+5000
+43 - Next: nested end-of-stmtList while returns to enclosing while container
+stmt s;
+Select s such that Next(162, s)
+163, 160
+5000
+44 - Next: single while nested in while
+stmt s;
+Select s such that Next(163, s)
+162, 164
+5000
+45 - Next: if descending into normal ifs
+stmt s;
+Select s such that Next(164, s)
+165, 173
+5000
+46 - Next: nested if descending into normal ifs
+stmt s;
+Select s such that Next(175, s)
+180
+5000
+47 - Next: end point while stmt exit to enclosing while, through 3 levels of ifs
+stmt s;
+Select s such that Next(167, s)
+163, 168
+5000
+48 - Next: normal stmt returns to enclosing while, which is deeply nested
+stmt s;
+Select s such that Next(168, s)
+167
+5000
+49 - Next: end point normal stmt exit to enclosing while, through 3 levels of ifs
+stmt s;
+Select s such that Next(169, s)
+163
+5000
+50 - Next: end point normal stmt exit to enclosing while, through 3 levels of ifs
+stmt s;
+Select s such that Next(171, s)
+163
+5000
+51 - Next: end point normal stmt exit to enclosing while, through 3 levels of ifs
+stmt s;
+Select s such that Next(172, s)
+163
+5000
+52 - Next: end point normal stmt exit to following stmt, through 2 levels of ifs
+stmt s;
+Select s such that Next(175, s)
+180
+5000
+53 - Next: end point normal stmt exit to following stmt, through 2 levels of ifs
+stmt s;
+Select s such that Next(176, s)
+180
+5000
+54 - Next: end point normal stmt exit to following stmt, through 2 levels of ifs
+stmt s;
+Select s such that Next(178, s)
+180
+5000
+55 - Next: end point normal stmt exit to following stmt, through 2 levels of ifs
+stmt s;
+Select s such that Next(179, s)
+180
+5000
+56 - Next: normal stmt from end of else block returns to enclosing while container
+stmt s;
+Select s such that Next(180, s)
+163
+5000
+57 - Next: last stmt of procedure goes nowhere next
+stmt s;
+Select s such that Next(181, s)
+none
+5000
+58 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(160, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+59 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(161, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+60 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(162, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+61 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(163, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+62 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(164, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+63 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(165, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+64 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(166, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+65 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(167, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+66 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(168, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+67 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(169, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+68 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(170, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+69 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(171, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+70 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(172, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+71 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(173, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+72 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(174, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+73 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(175, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+74 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(176, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+75 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(177, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+76 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(178, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+77 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(179, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+78 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(180, s)
+160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181
+5000
+79 - Next*: able to do next* traversal through multiple nested ifs and whiles
+stmt s;
+Select s such that Next*(181, s)
+
+5000

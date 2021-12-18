@@ -1,0 +1,31 @@
+procedure first {
+  a = 2 + b / 2 - c * d;
+  call second;
+  call fourth;
+  read e;
+}
+
+procedure second {
+  d = b / 2 - c;
+  if (a == c) then {
+    print a;
+  } else {
+    while (a > 1) {
+      b = a / 2 - 3;
+    }
+  }
+  call third;
+}
+
+procedure third {
+  print f;
+  while (1 == 1) {
+    f = f + 1;
+  }
+}
+
+procedure fourth {
+  call second;
+  read g;
+  g = a + b % 3;
+}

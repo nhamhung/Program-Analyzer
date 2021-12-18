@@ -1,0 +1,56 @@
+procedure main {
+    while (5 == 5) {
+        while (5 == 5) {
+            while (5 == 5) {
+                while (5 == 5) {
+                    while (5 == 5) {
+                        while (5 == 5) {
+                            while (5 == 5) {
+                                while (5 == 5) {
+                                    while (5 == 5) {
+                                        while (5 == 5) {
+                                            print a;
+                                        }                        
+                                    }                        
+                                }                            
+                            }                        
+                        }
+                    }                       
+                }            
+            }
+        }
+    }
+}
+
+procedure lines {
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+    print a;
+}

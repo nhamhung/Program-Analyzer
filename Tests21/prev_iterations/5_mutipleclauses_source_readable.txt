@@ -1,0 +1,36 @@
+procedure main {
+    if (time == 5) then {                                                       //1
+        call ringAlarm;                                                         //2
+        while (time > 5 || time > 6 || time < 7 && anger != 10000) {            //3
+            anger = 0;                                                          //4
+            print anger;                                                        //5
+            call makeNoise;                                                     //6
+        }
+    } else {
+        time = time + 1;                                                        //7
+    }
+}
+
+procedure ringAlarm {
+    while (1 == 1) {                                                            //8
+        call makeNoise;                                                         //9
+        anger = 10 * time + x * y;                                              //10
+        while (anger == 0 && tilt >= (1 * k + j * (y - 1)) {                    //11
+            tilt = tilt * 100 - time;                                           //12
+        }
+    }
+}
+
+procedure makeNoise {
+    if (noise == 1 && time > 10) then {                                         //13
+        call beepBeep;                                                          //14
+    } else {
+        sleep = bad * time + i / j / k;                                         //15
+        print sleep;                                                     //16
+    }
+}
+
+procedure beepBeep {
+    print tune;                                                                 //17
+    print time;                                                                 //18
+}

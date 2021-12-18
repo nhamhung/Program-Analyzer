@@ -1,0 +1,295 @@
+procedure P1 {
+  v6 = 7 + v4 % v5 / (v10) / (v4 - v8 % 996 - v5);
+  read v10;
+  print v7;
+  if (v6 + 389 / v2 > v8 - v7 * v3) then {
+    v6 = v8 / v10 + (v9 - v2 % (v8));
+    read v1;
+  } else {
+    v6 = 40 + 11 % (v3) + v1 * (v6 + v6 / v3) + v8 / (492) / v10 % v1;
+  }
+  print v8;
+}
+
+procedure P2 {
+  print v7;
+  read v9;
+  if (v8 > v8 - v2 / v7) then {
+    while (542 <= 411) {
+      read v8;
+    }
+  } else {
+    read v4;
+    read v8;
+  }
+  v3 = v5 * v10 / v4;
+  read v1;
+}
+
+procedure P3 {
+  if (382 == v10) then {
+    print v1;
+  } else {
+    while (v8 < 248) {
+      read v10;
+      print v6;
+    }
+  }
+  read v2;
+  if (v5 + v1 % v8 < v3) then {
+    if (496 > v9) then {
+      read v10;
+    } else {
+      print v1;
+      read v3;
+    }
+  } else {
+    read v1;
+    if (71 - 472 / (v7) != v7) then {
+      read v1;
+      v3 = v4 + v4 / (v9) + v7 - v3 * (v7) / v6;
+    } else {
+      call P1;
+    }
+  }
+  if (v6 > v1 + v5 * (v5)) then {
+    if (v4 > 96) then {
+      read v1;
+      while (354 != v8 + v10) {
+        read v8;
+      }
+    } else {
+      while (v4 >= 631) {
+        v1 = v1 - v6 * v7 + v9 * v10 - v4 % (v6) % v10 * v7;
+        if (v9 != v8) then {
+          while (v4 < v1) {
+            print v5;
+          }
+        } else {
+          call P1;
+          while (330 > v10) {
+            print v3;
+          }
+        }
+      }
+    }
+    v5 = 322 + v1 / v7 + v2 / (v4) % (850 - v8 % (v8)) - 209 / v6 * (v1) * v10;
+  } else {
+    if (862 == v5 - v5 / v8) then {
+      while (901 != v6) {
+        v10 = v7 * (825) - 879 / v9 / (843 + v8 * (v9)) % (415 + v10 % 932 - v4 % v2 % (v5 - v9));
+        while (959 == v2) {
+          print v10;
+          while (v4 != v4) {
+            v8 = v10 + v10 / (677) - v6 + v10 / 34;
+          }
+        }
+      }
+      if (v5 != v10) then {
+        if (372 > v3) then {
+          while (v3 > 444) {
+            print v10;
+            call P1;
+          }
+          read v7;
+        } else {
+          v3 = v6 * (v7) + v9 * (886 - 300 % v10) * v6;
+          v10 = (v10);
+        }
+        if (v1 < 137 + 401 / (v2)) then {
+          read v10;
+          read v6;
+        } else {
+          v3 = 999 / (460) - 389 % v9 * 375;
+          if (v6 >= v8 - v10) then {
+            read v8;
+          } else {
+            print v1;
+          }
+        }
+      } else {
+        read v4;
+        read v9;
+      }
+    } else {
+      read v6;
+      read v9;
+    }
+  }
+  while (v2 - 494 * v9 != v2 - 737 * v8) {
+    v2 = 855 % (v5) * (v10);
+  }
+}
+
+procedure P4 {
+  v7 = v3 - 900 * v4 + (v1) + v10 / (v10) / v10 / (v6 % v5);
+  while (779 != 385) {
+    call P1;
+    if (v4 + v2 <= v3 - 984 * v8) then {
+      v8 = v9 % v10 - v9 % (949 + 86) * v6;
+      v8 = v10 + v9 / v4 + v8 % v2 % (v6 - v5 % 29) - v5 * (v8) % 51 / 954;
+    } else {
+      read v6;
+      print v6;
+    }
+  }
+  print v2;
+  while (v3 <= 613) {
+    if (v8 >= v4) then {
+      call P2;
+    } else {
+      read v2;
+    }
+    v10 = v2 + 742 / (v4) - 931 % v9 % v9 + v4;
+  }
+  if (v3 == v8) then {
+    print v10;
+    while (9 == v7) {
+      read v9;
+    }
+  } else {
+    while (v10 >= v7) {
+      while (v6 != 814) {
+        v2 = v1 + v7 % v2 - v2 * v9 * (850) - v7;
+        v2 = v2 % (323);
+      }
+    }
+  }
+}
+
+procedure P5 {
+  v2 = v6 / v9 + 185 % (v4) * (872 - v10 * v8) / v10;
+  print v4;
+  print v5;
+  v4 = v10 % (976) - (v4) / (362 + v5 / v6 + v8 * (v2) % 264);
+  call P4;
+}
+
+procedure P6 {
+  print v1;
+  v1 = 12;
+  v2 = v1 + v3;
+  while (v3 < 5) {
+    v3 = v2 * 2 + 1;
+    v3 = v2 + v3 % 20 / (v6 + 30);
+    call P3;
+    if (v10 == 3) then {
+        v5 = v3 + 1;
+        v6 = v3 + v5;
+    } else {
+        v7 = v5 + v3;
+        v8 = v7 - v9;
+        if (v2 + 5 <= 9) then {
+            v10 = v8 + 1;
+            v8 = v5 - 2;
+        } else {
+            v10 = v3 + v4;
+        }
+    }
+  }
+  v3 = v1 + v2;
+  v1 = v3 + v2;
+  v2 = v1 + v3;
+}
+
+procedure P7 {
+  v5 = 154 - v7 + v6 / v8 % (591) - (224) - (v1);
+  while (v1 > v10 + v10) {
+    print v10;
+    print v10;
+    if (!((480 <= 147) || (110 >= v9))) then {
+      read v2;
+    } else {
+      v10 = v10 * v1 / (v7 - v1) / (v5);
+    }
+  }
+  print v9;
+  read v7;
+  if ((!(982 >= v10)) && ((v6 > v7) || (v7 >= v10))) then {
+    while (!((v2 < v1) && (v8 >= v5))) {
+      v10 = 172 + (200) - 404 % v10 * v3 % v9 - (v10 - v8) * 904;
+    }
+    if (!(v9 != v2)) then {
+      if ((v10 > v8) && ((491 < v5) && (v9 < v8))) then {
+        if ((519 > v3) || (!(805 + v8 % (505) != 54))) then {
+          print v6;
+        } else {
+          v4 = v4 - 173 * (v5) * 233 - (v9) - v6 % (687) % v3 * v3 % v10;
+          print v2;
+          print v2;
+        }
+      } else {
+        print v4;
+      }
+      if (((v7 + 591 * 274 <= 184) || (v7 - v10 * v10 <= 768)) && (!(v2 != 808))) then {
+        print v10;
+        print v2;
+        print v2;
+      } else {
+        print v5;
+      }
+    } else {
+      print v10;
+    }
+  } else {
+    while (!((v5 >= v10) && (v6 == v2))) {
+      if (v2 < v6) then {
+        v1 = 151 / (v4) - v10 * v8 % (327) / (v1 % v3) + 299 / (v4 - 522 % v1 + 196 / v1 * v9) % 417;
+        read v1;
+      } else {
+        v4 = 238 + v3 * v2 - v6 + v5 % (v2) / (v2 + v7 % v3) % (v8 + v7 - 984 / (262) * v6) % (v5 % 523 - (v2 + 281));
+        while ((v4 <= 104) || (!(340 <= 384))) {
+          read v8;
+          read v2;
+          print v9;
+        }
+        read v10;
+      }
+    }
+    read v7;
+  }
+  print v1;
+}
+
+procedure P8 {
+    while (1 == 1) {
+        read a;
+        while (1 == 1) {
+            while (1 == 1) {
+                if (5 == 5) then {
+                    if (5 == 5) then {
+                        if (5 == 5) then {
+                            while (1 == 1) {
+                                read a;
+                            }
+                        } else {
+                            read a;
+                        }
+                    } else {
+                        if (5 == 5) then {
+                            read a;
+                        } else {
+                            read a;
+                        }
+                    }
+                } else {
+                    if (5 == 5) then {
+                        if (5 == 5) then {
+                            read a;
+                        } else {
+                            read a;
+                        }
+                    } else {
+                        if (5 == 5) then {
+                            read a;
+                        } else {
+                            read a;
+                        }
+                    }
+                    read a;
+                }
+            }
+        }
+    }
+    read a;
+}

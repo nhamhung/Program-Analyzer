@@ -1,0 +1,56 @@
+procedure A {
+    while (5 == 5) {    //ok Q: Uses(this_sn, v) and Modifies(this_sn, v) to test that vars modded and used are propagated up parent stmts; Q: while pattern has no variables
+        while (5 == 5) {
+            while (5 == 5) {
+                if (5 == 5) then {  //ok Q: Uses(this_sn, v) and Modifies(this_sn, v) for immediate container parent of calls stmt
+                    modme = used + abused;
+                    call moreUses;  //ok Q: Uses(this_sn, v) to test variables used by call stmt = variables used by proc called,where proc contains another call
+                } else {
+                    modme = 5;
+                    call moreMods;  //ok Q: Modifies(this_sn, v) to test variables mod by call stmt = variables mod by proc called,where proc contains another call
+                }
+            }
+        }
+    }
+
+    while ((ca > cb) && (cc == cd)) {  //ok Q: while pattern extracts vars in cond
+        print a;
+    }
+
+    if (ce < cf) then { //ok Q: if pattern extracts vars in cond
+        yy = 5;
+    } else {
+        jj = x * 5;
+    }
+}
+
+procedure rootcall {    //Q: Call/*("rootcall", p) should use mods, moreMods, uses, moreUses
+    call moreUses;
+    call moreMods;
+}
+
+procedure moreUses {    //ok query Uses("moreMods", v) to test UsesP containing a call 
+    print d;
+    print e;
+    print f;
+    call uses;  //Q: Uses(this_sn, v) to test variables used by call stmt = variables used by proc called 
+}
+
+procedure uses {    //ok query Uses("uses", v) to test simple UsesP
+    print a;
+    print b;
+    print c;
+}
+
+procedure moreMods {    //ok query Modifies("moreMods", v) to test ModifiesP containing a call 
+    read d;
+    read e;
+    read f;
+    call mods;  //Q: Modifies(this_sn, v) to test variables mod by call stmt = variables mod by proc called 
+}
+
+procedure mods {    //ok, query Modifies("mods", v) to test simple ModifiesP
+    read a;
+    read b;
+    read c;
+}

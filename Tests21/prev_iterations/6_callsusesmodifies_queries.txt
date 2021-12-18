@@ -1,0 +1,145 @@
+1 - base case modifiesP
+variable v;
+Select v such that Modifies("mods",v)
+a,b,c
+5000
+2 - base case usesP
+variable v;
+Select v such that Uses("uses",v)
+a,b,c
+5000
+3 - modifiesP containing call
+variable v;
+Select v such that Modifies("moreMods",v)
+a,b,c,d,e,f
+5000
+4 - usesP containing call
+variable v;
+Select v such that Uses("moreUses",v)
+a,b,c,d,e,f
+5000
+5 - usesS on statement number of call stmt
+variable v;
+Select v such that Uses(6,v)
+a,b,c,d,e,f
+5000
+6 - modifiesS on statement number of call stmt
+variable v;
+Select v such that Modifies(6,v)
+none
+5000
+7 - usesS on statement number of call stmt
+variable v;
+Select v such that Uses(8,v)
+none
+5000
+8 - modifiesS on statement number of call stmt
+variable v;
+Select v such that Modifies(8,v)
+a,b,c,d,e,f
+5000
+9 - usesS on statement number of container with call stmt inside
+variable v;
+Select v such that Uses(4,v)
+a,b,c,d,e,f,used,abused
+5000
+10 - modifiesS on statement number of container with call stmt inside
+variable v;
+Select v such that Modifies(4,v)
+a,b,c,d,e,f,modme
+5000
+11 - usesS on statement number of container with deeply nested containers within
+variable v;
+Select v such that Uses(1,v)
+a,b,c,d,e,f,used,abused
+5000
+12 - modifiesS on statement number of container with deeply nested containers within
+variable v;
+Select v such that Modifies(1,v)
+a,b,c,d,e,f,modme
+5000
+13 - if pattern variables extracted, non-empty
+variable v; if ifs;
+Select v pattern ifs(v,_,_) with ifs.stmt# = 11
+ce,cf
+5000
+14 - while pattern variables extracted, non-empty
+variable v; if ifs; while w;
+Select v pattern w(v,_) with w.stmt# = 9
+ca,cb,cc,cd
+5000
+15 - while pattern variables extracted, empty
+variable v; if ifs; while w;
+Select v pattern w(v,_) with w.stmt# = 1
+none
+5000
+16 - leaf of call tree has no children
+procedure p;
+Select p such that Calls("mods",p)
+none
+5000
+17 - leaf of call tree has no children
+procedure p;
+Select p such that Calls("uses",p)
+none
+5000
+18 - non-leaf of call tree has children
+procedure p;
+Select p such that Calls("moreMods",p)
+mods
+5000
+19 - non-leaf of call tree has children
+procedure p;
+Select p such that Calls("moreUses",p)
+uses
+5000
+20 - non-leaf of call tree has children
+procedure p;
+Select p such that Calls("rootcall",p)
+moreUses,moreMods
+5000
+21 - leaf of call* tree has no children
+procedure p;
+Select p such that Calls*("mods",p)
+none
+5000
+22 - leaf of call* tree has no children
+procedure p;
+Select p such that Calls*("uses",p)
+none
+5000
+23 - non-leaf of call** tree has children
+procedure p;
+Select p such that Calls*("moreMods",p)
+mods
+5000
+24 - non-leaf of call* tree has children
+procedure p;
+Select p such that Calls*("moreUses",p)
+uses
+5000
+25 - non-leaf of call* tree has children
+procedure p;
+Select p such that Calls*("rootcall",p)
+moreUses,moreMods,uses,mods
+5000
+26 - call stmt uses same variables as the procedure it calls
+variable v;
+Select v such that Uses(19,v)
+a,b,c
+5000
+27 - call stmt modifies same variables as the procedure it calls
+variable v;
+Select v such that Modifies(19,v)
+none
+5000
+28 - call stmt uses same variables as the procedure it calls
+variable v;
+Select v such that Uses(26,v)
+none
+5000
+29 - call stmt modifies same variables as the procedure it calls
+variable v;
+Select v such that Modifies(26,v)
+a,b,c
+5000

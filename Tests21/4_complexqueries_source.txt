@@ -1,0 +1,240 @@
+procedure P1 {
+    read d;
+    print a;
+    h = c - h + 451 + j / (c) / (922 - c % (432)) - b % e * (546) * (i + (d));
+    while (a != 913) {
+        while (842 < i - g % 392) {
+            if (g < 774 - 636 / a) then {
+                j = i % e;
+                print i;
+                call cap00;
+                read g;
+                call P3;
+            } else {
+                call cap00;
+            }
+            print h;
+        }
+        while (i != e) {
+            while (i + j / 349 >= 25) {
+                f = 220 * 9 + d;
+                call P4;
+                call P3;
+                print b;
+                call P3;
+            }
+            read h;
+            print a;
+        }
+        g = 707;
+        if (j < g) then {
+            if (f + e * (684) != e) then {
+                call P3;
+                j = (j);
+                b = 551 + 547 * 909 + a % (268 + g % j) - 331 % c % (484 - g) % (e % (c));
+                c = c - g + h * f % c % (i - g % c + 753 % a);
+            } else {
+                read e;
+            }
+            print i;
+            c = 552 + a / (h) + g * ((c - h) / (f)) - 66 * (a) / (e + e * 218) / 931;
+            c = f / c % e;
+        } else {
+            while (133 <= 562 + 102) {
+                read a;
+                print c;
+                print h;
+            }
+        }
+        print a;
+    }
+    a = f + 843 + i * (764) % (e + j * (f)) - a / (984) % h / (900 - c / 205 - c * 998 % a);
+}
+
+procedure cap00 {
+    if (b > a) then {
+        while (332 > b) {
+            if (f < g) then {
+                print g;
+                print j;
+            } else {
+                print b;
+                c = 183 % (g) % (g + d);
+                j = h * (d) / b;
+                call P4;
+                f = g + g * a / (863 - 279 / i) * i;
+            }
+            b = f + 945 * (429) % i + (g) * (457);
+            while (431 < g) {
+                call P5;
+                call P4;
+                print g;
+            }
+            while (i == c) {
+                call P4;
+                read j;
+                print j;
+                d = j + 853 - 92 * 263 / (h + a % (f)) + 772 % 842 % (e + 512 % 368) * i;
+                print i;
+            }
+        }
+    } else {
+        if (e != b) then {
+            read b;
+        } else {
+            while (e == e) {
+                call P4;
+            }
+            if (769 != i) then {
+                read d;
+            } else {
+                print j;
+                call P4;
+            }
+            if (f > 213) then {
+                call P3;
+                read d;
+                read c;
+            } else {
+                h = 418 + j * i - a / 119 / e - e % a / (i) / (d + b / d - 445 % (681) * h);
+                i = 275 * i + 897 % (d) % f;
+                read d;
+                print f;
+                call P3;
+            }
+            while (f + j / (f) >= 84) {
+                g = 312 + a / 773 % (i - g / a) + g;
+                call P5;
+                print c;
+                i = b * g + 221 / (h) * (920 + 550 * g) * (985 + (j));
+                read i;
+            }
+            read b;
+        }
+        print c;
+        read d;
+        if (d < e) then {
+            if (h - d == d) then {
+                f = (g);
+                e = 927 % (993) / a;
+                print b;
+                read c;
+            } else {
+                print j;
+            }
+        } else {
+            while (c >= f) {
+                read i;
+                c = f - i % j * i + e % e % c;
+            }
+            call P5;
+            call P5;
+            read a;
+            if (e == j) then {
+                call P4;
+                print c;
+                print f;
+                read e;
+            } else {
+                read d;
+                e = g / (906) / (j + i / (c));
+                read h;
+                print i;
+            }
+        }
+    }
+    while (a + a / (c) == g) {
+        read h;
+    }
+    call P4;
+    read g;
+    d = g - j - f / c % (h + 100 % b) - (142 + i % (184));
+}
+
+procedure P3 {
+    if (d != 573) then {
+        read f;
+        if (525 > 997) then {
+            c = g - i + i * a / 984 % 395;
+            e = f - h % 850 - d * 897 % a + 809 / (388) / 86 * h;
+        } else {
+            h = 270 - 15 * f + h / (285) * h - (h - b % (f));
+            c = h % 214 * 433;
+            print d;
+            call P5;
+            call P4;
+        }
+        call P5;
+    } else {
+        f = 94 + e % (b) * 650 / (j % (77));
+        c = d + (a) + d;
+        read d;
+    }
+    read i;
+    while (a <= b) {
+        read e;
+        j = b + j - (h) + (c);
+    }
+    while (592 < b - 308) {
+        read i;
+    }
+    read j;
+}
+
+procedure P4 {
+    read c;
+    a = d / (i) + (d) * f;
+    read f;
+    read i;
+    print c;
+}
+
+procedure P5 {
+    if (969 >= h) then {
+        while (633 + c == f) {
+            b = 845 + j % f % i - (c) / (744 + f * j / j);
+            h = c - 657 % (c - e * (b)) - 698 % (520 + c) / (g - 630 / c - e);
+            if (c > i) then {
+                f = c + (f) * (g + h * a - d);
+                a = (583);
+                print f;
+                read f;
+            } else {
+                b = d / d - i;
+                read g;
+                read f;
+            }
+            while (516 < d) {
+                call P4;
+                read g;
+            }
+            read a;
+        }
+        read i;
+        if (424 > h + c) then {
+            call P4;
+            print j;
+            read e;
+            print f;
+        } else {
+            call P4;
+            read h;
+        }
+        print cap00;
+        read g;
+    } else {
+        print h;
+        read j;
+    }
+    print a;
+    call P4;
+    print h;
+    while (j > 631) {
+        while (829 - g / (c) != 21) {
+            print d;
+            e = 834 + a / (a) / h - 450 * 469 % 894 % (c - (a));
+        }
+        print d;
+        read a;
+    }
+}

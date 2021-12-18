@@ -1,0 +1,240 @@
+1- Valid select all assignments returns all assignments
+assign a;
+Select a
+5
+5000
+2 - Valid Follows(INT, INT), consecutive INTs separated by if-else returns none
+assign a;
+Select a such that Follows(3, 4)
+none
+5000
+3 - Valid Follows(INT, _), last statement in stmtLst returns none
+assign a;
+Select a such that Follows(1, _)
+none
+5000
+4 - Valid Follows(DE, _), selected DE is always the last of the stmtLst returns none
+assign a; while w;
+Select a such that Follows(w, _)
+none
+5000
+5 - Valid Follows(_, _) returns false
+assign a;
+Select a such that Follows(_, _)
+none
+5000
+6 - Valid Parent(INT, INT) returns all variables
+variable v;
+Select v such that Parent(1, 2)
+WHILE, PRINT007, read, if, else, then, print, while, call, x1
+5000
+7 - Valid Parent(INT, INT) reversed from previous returns none
+variable v;
+Select v such that Parent(2, 1)
+none
+5000
+8 - Valid Parent(INT, INT) doubly nested statements return none
+variable v;
+Select v such that Parent(1, 3)
+none
+5000
+9 - Valid Parent(INT, DE), nested DE is a container statement returns corresponding if statement
+if ifs;
+Select ifs such that Parent(2, ifs)
+none
+5000
+10 - Valid Parent(INT, DE), INT is a child of the DE returns none
+variable v; while w;
+Select v such that Parent(5, w)
+none
+5000
+11 - Valid Parent(INT, _), INT is on the lowest level returns none
+stmt s;
+Select s such that Parent(5, _)
+none
+5000
+12 - Valid tricky names Parent(DE, INT), INT is in else container of if DE returns all statements
+stmt Select; if if;
+Select Select such that Parent(if, 4)
+1, 2, 3, 4, 5
+5000
+13 - Valid Parent(DE, INT), DE is a child of INT return none
+if ifs; stmt s;
+Select s such that Parent(ifs, 1)
+none
+5000
+14 - Valid Parent(DE, DE), child DE doubly nested in one occurrence of parent DE and directly nested in another occurrence return parent occurrence
+while w; assign a;
+Select w such that Parent(w, a)
+4
+5000
+15 - Valid Parent(DE, DE), child DE doubly nested return none
+assign a; if ifs;
+Select a such that Parent(ifs, a)
+none
+5000
+16 - Valid Parent(DE, _), unused declarations, return all occurrences of DE
+while w; assign a; stmt s; procedure p; variable v; if ifs; print pn; read r;
+Select w such that Parent(w, _)
+1, 4
+5000
+17 - Valid Parent(_, INT) nested INT returns all variables
+variable v;
+Select v such that Parent(_, 2)
+WHILE, PRINT007, read, if, else, then, print, while, call, x1
+5000
+18 - Valid Parent*(INT, INT) deeply nested returns all statements
+stmt s;
+Select s such that Parent*(1, 5)
+1, 2, 3, 4, 5
+5000
+19 - Valid Parent*(INT, DE) deeply nested DE returns nested DE
+assign a;
+Select a such that Parent*(1, a)
+5
+5000
+20 - Valid Parent*(DE, INT), deeply nested INT nested in two different container types returns container
+if ifs;
+Select ifs such that Parent*(ifs, 5)
+2
+5000
+21 - Valid Parent*(DE, DE), doubly nested DE returns read statement
+read r; while w;
+Select r such that Parent*(w, r)
+3
+5000
+22 - Valid Parent*(DE, DE), first DE is a non-container statement
+read r; while w;
+Select r such that Parent*(r, w)
+none
+5000
+23 - Valid pattern a(_, partial match), partial match return all statements
+stmt s; assign a;
+Select s pattern a(_, _"x1"_)
+1, 2, 3, 4, 5
+5000
+24 - Valid pattern a(_, partial match), partial match return corresponding assign statement
+stmt s; assign a;
+Select a pattern a(_, _"x1"_)
+5
+5000
+25 - Valid pattern a(_, partial match), matches a constant returns corresponding assign statement
+stmt s; assign a;
+Select a pattern a(_, _"69"_)
+5
+5000
+26 - Valid pattern a(_, partial match), not a match returns none
+stmt s; assign a;
+Select a pattern a(_, _"x12"_)
+none
+5000
+27 - Valid Follows*(DE, _), DE not in source code returns none
+print pn; stmt s;
+Select s such that Follows*(pn, _)
+none
+5000
+28 - Valid Uses(INT, NAME), variable is part of an expression in statement return read statements
+read r;
+Select r such that Uses(5, "x1")
+3
+5000
+29 - Invalid Uses(INT, NAME), name is a constant in the statement return none
+stmt s;
+Select s such that Uses(5, "69")
+none
+5000
+30 - Valid Uses(INT, NAME), variable is in the program but not in that statement return none
+stmt s;
+Select s such that Uses(5, "while")
+none
+5000
+31 - Valid Uses(INT, VAR), statement is container statement that uses variables return all stmts
+stmt s; variable v;
+Select s such that Uses(4, v)
+1, 2, 3, 4, 5
+5000
+32 - Valid Uses(DE, NAME), variable used by assign DE return corresponding assignment
+assign a;
+Select a such that Uses(a, "x1")
+5
+5000
+33 - Valid Uses(DE, NAME), variable only modified by assign DE returns none
+stmt s; assign a;
+Select s such that Uses(a, "print")
+none
+5000
+34 - Valid Uses(DE, NAME), variable used in DE container deeply nested return all statements
+stmt s; if ifs;
+Select s such that Uses(ifs, "x1")
+1, 2, 3, 4, 5
+5000
+35- Valid Uses(DE, NAME), variable used in conditional expression of container only returns true
+while w;
+Select w such that Uses(w, "PRINT007")
+1
+5000
+36 - Valid Uses(DE, VAR DE), read DE returns false
+read r; variable v;
+Select r such that Uses(r, v)
+none
+5000
+37 - Valid Uses(DE, _), print DE returns false if not present
+print pn; stmt s;
+Select s such that Uses(pn, _)
+none
+5000
+38 - Valid Modifies(INT, NAME), variable modified by read statement returns all variables
+variable v;
+Select v such that Modifies(3, "read")
+WHILE, PRINT007, read, if, else, then, print, while, call, x1
+5000
+39 - Valid Modifies(INT, NAME), variable is used not modified by statement returns none
+stmt s;
+Select s such that Modifies(7, "x1")
+none
+5000
+40 - Valid Modifies(DE, NAME), variable modified by assign DE returns assignment statement
+assign a;
+Select a such that Modifies(a, "print")
+5
+5000
+41 - Valid Modifies(DE, NAME), variable modified by while DE nested return while statement
+while w;
+Select w such that Modifies(w, "read")
+1
+5000
+42 - Valid Modifies(DE, VAR), if DE modifies some statements return true
+if ifs; variable v;
+Select ifs such that Modifies(ifs, v)
+2
+5000
+43 - Valid two clauses, both clauses evaluate to true independently, selected design entity is independent
+stmt s; if ifs; read read; variable v; assign a;
+Select s such that Parent(ifs, read) pattern a(v, _)
+1, 2, 3, 4, 5
+5000
+44 - Valid two clauses, both clauses evaluate to true independently, selected design entity evaluated
+while w; assign a;
+Select w such that Uses(w, "WHILE") pattern a(_, _)
+1
+5000
+45 - Valid two clauses, one evaluates to true and one evaluates to false return none
+stmt s;
+Select s such that Parent(s, 2) pattern a(v, _"read"_")]
+none
+5000
+46 - Valid two clauses, both evaluate dependently and selects one of the synonyms evaluated
+assign a; variable v;
+Select v such that Parent*(1, a) pattern a(v, _"69"_)
+print
+5000
+47 - Valid two clauses, synonyms are exact match modifies
+variable v; assign a;
+Select v such that Modifies(a, v) pattern a(v, _"x1"_)
+print
+5000
+48 - With clause where design entity does not exist
+call cl;
+Select BOOLEAN with cl.procName = cl.procName
+FALSE
+5000

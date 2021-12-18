@@ -1,0 +1,11 @@
+procedure main {
+  while ((WHILE + PRINT007 != read) || (if <= else)) {    // 1
+    if (!((420 > then) && (print < while))) then {        // 2
+      read read;                                          // 3
+    } else {
+      while (while >= (69 + then) % call) {               // 4
+        print = x1 + 69;                                  // 5
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+procedure main {
+	if (a > 1) then {
+		b = 3;
+		while (c <= (a - d) / f) {
+			print d;
+			if (e == 1) then {
+				f = 1 - h;
+			} else {
+				d = e - 0 - d;
+			}
+			g = 16 + 0 * i + g;
+		}
+	} else {
+		j = i / h / k / t;
+		read l;
+		read m;
+		n = j * d / a + 3;
+	}
+	if (o * a - n == 3 - d * 6 + l) then {
+		if (a + p < m) then {
+			read s;
+		} else {
+			print q;
+			f = q * s;
+		}
+		while (t >= u + 3 + j) {
+			read v;
+			q = r * d * f * g * q * f + n;
+		}
+	} else {
+		print w;
+	}
+	while (1 == 1) {
+		read x;
+	}
+	while (3 != 3) {
+		print y;
+	}
+	z = x * y + (z * a + b);
+}

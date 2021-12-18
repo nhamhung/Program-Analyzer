@@ -1,0 +1,547 @@
+procedure P1 {
+  while (!(!(231 == f + j % i))) {  // 1
+    print i;  // 2
+    while (320 < d - c * (87)) {  // 3
+      if ((!(f <= c)) && (j <= g + b % (c))) then {  // 4
+        j = h;  // 5
+        read d;  // 6
+        read b;  // 7
+        d = f;  // 8
+        print e;  // 9
+      } else {
+        read f;  // 10
+        read a;  // 11
+        e = a;  // 12
+        call P3;  // 13
+        call P2;  // 14
+        print i;  // 15
+        a = 987 - a / (f);  // 16
+        read h;  // 17
+        print f;  // 18
+      }
+      if (!(!(b == b))) then {  // 19
+        read h;  // 20
+        print e;  // 21
+        print e;  // 22
+        print b;  // 23
+        g = g;  // 24
+        read d;  // 25
+        read b;  // 26
+        print e;  // 27
+        print e;  // 28
+      } else {
+        read e;  // 29
+        b = j;  // 30
+        read i;  // 31
+        print g;  // 32
+        read e;  // 33
+        print e;  // 34
+        print c;  // 35
+        read j;  // 36
+      }
+      h = b - 818;  // 37
+      while (!((79 != g) || (e == 294))) {  // 38
+        read i;  // 39
+        print e;  // 40
+        read d;  // 41
+        call P3;  // 42
+        e = e - d % (179);  // 43
+      }
+      d = i + 976 * f;  // 44
+    }
+    call P2;  // 45
+    while (((426 <= 838) || (f - 552 > g)) && ((602 > c) && (d + h / h > d))) {  // 46
+      while (i > f) {  // 47
+        d = c + d * 531;  // 48
+        i = 178;  // 49
+        print e;  // 50
+        read d;  // 51
+        print h;  // 52
+        print d;  // 53
+        call P3;  // 54
+        call P3;  // 55
+      }
+      print e;  // 56
+      print f;  // 57
+      while (h != f) {  // 58
+        g = i + g / d;  // 59
+      }
+    }
+    f = i - f;  // 60
+    i = 409 - 796;  // 61
+  }
+  h = g + i * (h);  // 62
+  while ((h <= a) && (b == a)) {  // 63
+    if (((c - j % (d) != d - f / (h)) || (f >= f)) && ((b <= e) || (j >= 4))) then {  // 64
+      read f;  // 65
+      if (273 <= a) then {  // 66
+        read f;  // 67
+        i = 270;  // 68
+        i = d;  // 69
+        print g;  // 70
+        call P3;  // 71
+        print g;  // 72
+        call P3;  // 73
+      } else {
+        print a;  // 74
+        read c;  // 75
+        i = d + 329 * e;  // 76
+        call P2;  // 77
+        h = c + b * a;  // 78
+        print g;  // 79
+        print d;  // 80
+        read f;  // 81
+      }
+      if (h != c) then {  // 82
+        read c;  // 83
+        print i;  // 84
+        print i;  // 85
+        print i;  // 86
+        read g;  // 87
+      } else {
+        read h;  // 88
+        read i;  // 89
+        print b;  // 90
+        read d;  // 91
+        call P3;  // 92
+        call P3;  // 93
+        print c;  // 94
+      }
+      if (934 != e - h * (864)) then {  // 95
+        print h;  // 96
+        print a;  // 97
+        read c;  // 98
+        read j;  // 99
+      } else {
+        print d;  // 100
+        print j;  // 101
+        c = g + a / (817);  // 102
+        print i;  // 103
+        b = b + i % (564);  // 104
+        print j;  // 105
+        i = i - g;  // 106
+        read a;  // 107
+      }
+      if (j == f) then {  // 108
+        print d;  // 109
+        read e;  // 110
+        call P3;  // 111
+        h = 749 + j % 389;  // 112
+        g = d + c / (344);  // 113
+      } else {
+        call P3;  // 114
+        b = g - g % b;  // 115
+        read b;  // 116
+        print f;  // 117
+        print j;  // 118
+        print f;  // 119
+      }
+      if (c < 307) then {  // 120
+        f = d;  // 121
+        print f;  // 122
+        read h;  // 123
+        read d;  // 124
+        print i;  // 125
+        j = 199 - e % (g);  // 126
+      } else {
+        read a;  // 127
+        call P2;  // 128
+      }
+      while ((d != b) && (!(c != 898))) {  // 129
+        call P3;  // 130
+      }
+      call P3;  // 131
+      print h;  // 132
+    } else {
+      if (!(368 > c)) then {  // 133
+        read a;  // 134
+        j = 135 - e % 779;  // 135
+        print j;  // 136
+        call P2;  // 137
+        f = c + h * (441);  // 138
+        j = d - f;  // 139
+      } else {
+        print b;  // 140
+        h = e;  // 141
+        d = 392;  // 142
+        read h;  // 143
+        read a;  // 144
+        h = 653;  // 145
+      }
+      read b;  // 146
+      read e;  // 147
+      d = g;  // 148
+      while (232 < g) {  // 149
+        print h;  // 150
+        read j;  // 151
+        call P3;  // 152
+        read h;  // 153
+        print i;  // 154
+        call P2;  // 155
+        read b;  // 156
+        print g;  // 157
+        call P3;  // 158
+        d = h - a % (j);  // 159
+      }
+      if (((i > 960 + 80) || (f >= 834 - a * 81)) && (c - 82 / (i) != e + j * h)) then {  // 160
+        read h;  // 161
+        print b;  // 162
+        g = h;  // 163
+        c = g;  // 164
+        read h;  // 165
+      } else {
+        f = 228 + h / (h);  // 166
+        print d;  // 167
+        print f;  // 168
+        print d;  // 169
+        print b;  // 170
+        j = c;  // 171
+        g = 332;  // 172
+      }
+      e = i + i * j;  // 173
+      while (((367 != c) || (48 >= i)) || ((f != g) || (g >= g))) {  // 174
+        read c;  // 175
+        print j;  // 176
+        i = d + i % (f);  // 177
+        print f;  // 178
+        read f;  // 179
+        e = b;  // 180
+        call P3;  // 181
+      }
+      f = h - a;  // 182
+      while (((d == a) && (b < h)) && (i > 47)) {  // 183
+        call P2;  // 184
+        call P3;  // 185
+        print i;  // 186
+        print g;  // 187
+        print f;  // 188
+        print a;  // 189
+      }
+    }
+    while ((!(b != h)) || (!(j == h))) {  // 190
+      read e;  // 191
+      b = a - 564;  // 192
+      if (((j > 722) || (e <= d)) && (h > a)) then {  // 193
+        j = a - c / (d);  // 194
+        g = b - 875;  // 195
+        read g;  // 196
+        d = f + 668;  // 197
+        print d;  // 198
+        h = j + b / (b);  // 199
+        read d;  // 200
+        c = b;  // 201
+      } else {
+        print b;  // 202
+        a = c + 446;  // 203
+        print g;  // 204
+        print j;  // 205
+        print d;  // 206
+        call P3;  // 207
+        read e;  // 208
+        e = h;  // 209
+        call P3;  // 210
+        d = 327 - 671 % 10;  // 211
+      }
+      read a;  // 212
+    }
+    if (!(!(d - c % b == c))) then {  // 213
+      while (!(a == b)) {  // 214
+        read j;  // 215
+        print h;  // 216
+        f = f - f;  // 217
+        read a;  // 218
+      }
+      read h;  // 219
+    } else {
+      print i;  // 220
+    }
+    print f;  // 221
+    b = c;  // 222
+    while (!((423 >= 76) || (b != b))) {  // 223
+      call P3;  // 224
+      read f;  // 225
+    }
+    read h;  // 226
+    if (!(e < 203)) then {  // 227
+      if ((!(j >= c)) || ((482 + 785 >= 207) && (j != h))) then {  // 228
+        read i;  // 229
+        call P3;  // 230
+        print e;  // 231
+        h = a - 164 / (j);  // 232
+        e = e + e % a;  // 233
+        call P3;  // 234
+      } else {
+        print i;  // 235
+        print c;  // 236
+        read a;  // 237
+        print a;  // 238
+        print h;  // 239
+      }
+      read f;  // 240
+      while ((!(b > f)) || (!(770 < b))) {  // 241
+        read g;  // 242
+        read i;  // 243
+        call P2;  // 244
+      }
+      read f;  // 245
+      call P2;  // 246
+    } else {
+      c = c;  // 247
+      print b;  // 248
+      print e;  // 249
+      if ((!(h - 335 * (648) < b)) || (!(h == j))) then {  // 250
+        b = g + 333 * 990;  // 251
+        read c;  // 252
+        print e;  // 253
+        read a;  // 254
+      } else {
+        a = b - i % (j);  // 255
+        d = e;  // 256
+      }
+      f = 439;  // 257
+      print c;  // 258
+      print g;  // 259
+      print g;  // 260
+    }
+  }
+  while (!(!(271 < e))) {  // 261
+    call P2;  // 262
+    print b;  // 263
+    print f;  // 264
+    print j;  // 265
+    call P2;  // 266
+    print e;  // 267
+  }
+  read d;  // 268
+}
+
+procedure P2 {
+  while (((e != h) && (a == e - 450 % (852))) || ((d < 606) || (h < 651))) {  // 269
+    read e;  // 270
+    g = i + f;  // 271
+    while (((153 < 754 + g % (70)) || (h <= d)) || (!(c + f % (301) >= b))) {  // 272
+      call P3;  // 273
+      g = d;  // 274
+      print j;  // 275
+      read g;  // 276
+      if (f < a) then {  // 277
+        d = e;  // 278
+      } else {
+        read g;  // 279
+        e = f;  // 280
+        print a;  // 281
+        h = d;  // 282
+      }
+      call P3;  // 283
+    }
+    print e;  // 284
+    read j;  // 285
+    print g;  // 286
+  }
+  while (((g >= 343) || (635 + j * (d) > c - 169 % a)) && ((408 >= d) && (i == j - 438))) {  // 287
+    i = g - c;  // 288
+    print f;  // 289
+    if (((929 - 113 % (c) > 851) || (d > 889 - d)) || ((864 > i) && (a > j + i % 675))) then {  // 290
+      e = 962 - g * (525);  // 291
+      print b;  // 292
+      while (((330 == e) && (f == 147)) && ((d < 712) || (697 == e))) {  // 293
+        d = b + 624 % d;  // 294
+        print e;  // 295
+      }
+      call P3;  // 296
+      while (c >= i) {  // 297
+        b = i;  // 298
+        read g;  // 299
+        g = g + c / d;  // 300
+        print g;  // 301
+      }
+      read e;  // 302
+      print f;  // 303
+    } else {
+      call P3;  // 304
+    }
+  }
+  while ((!(e != 127)) && ((c >= c - 988 / (j)) || (592 <= 657))) {  // 305
+    print g;  // 306
+    if (((451 != c) && (i + j / (996) == d - c * 556)) || ((659 - 91 >= c) || (579 < 135))) then {  // 307
+      h = a - i / (e);  // 308
+      while ((388 >= 275 + b / (a)) && (!(921 >= b))) {  // 309
+        print i;  // 310
+        read e;  // 311
+        read b;  // 312
+        g = c;  // 313
+        a = 799 - 385 % (c);  // 314
+        e = h;  // 315
+        read a;  // 316
+        i = i;  // 317
+      }
+      call P3;  // 318
+      c = g;  // 319
+      read i;  // 320
+      call P3;  // 321
+      print b;  // 322
+      call P3;  // 323
+    } else {
+      while (j <= j + 866) {  // 324
+        e = h + c % 202;  // 325
+        print e;  // 326
+        read f;  // 327
+        f = d;  // 328
+        j = a - 937;  // 329
+        read g;  // 330
+        i = b + j * d;  // 331
+        read b;  // 332
+        f = g;  // 333
+      }
+      if ((!(j <= i)) || (b > 339 + 434)) then {  // 334
+        h = 44 + a * (727);  // 335
+      } else {
+        read a;  // 336
+        j = a - 346 * c;  // 337
+      }
+      while (((h != d) || (770 < j)) || ((h > a - b / (785)) && (530 <= d))) {  // 338
+        c = c + a % (d);  // 339
+        read b;  // 340
+        call P3;  // 341
+      }
+      if ((e <= d) || (427 == d)) then {  // 342
+        read e;  // 343
+        print i;  // 344
+        read b;  // 345
+        call P3;  // 346
+        e = a + b / e;  // 347
+      } else {
+        print h;  // 348
+        g = i + a / e;  // 349
+        i = b;  // 350
+        j = 428 + b * f;  // 351
+        print g;  // 352
+        read h;  // 353
+        call P3;  // 354
+        read f;  // 355
+        call P3;  // 356
+        d = i - 933;  // 357
+      }
+      read j;  // 358
+      print d;  // 359
+      if ((c <= d) && (850 + 390 * 840 < g)) then {  // 360
+        d = 934;  // 361
+        print j;  // 362
+        print e;  // 363
+        print h;  // 364
+      } else {
+        g = i + e;  // 365
+        print c;  // 366
+        read d;  // 367
+        print f;  // 368
+        read a;  // 369
+        read h;  // 370
+        print e;  // 371
+        print j;  // 372
+      }
+      call P3;  // 373
+      print j;  // 374
+      if (((i >= j + 473 * (855)) && (487 == j)) || (f != j)) then {  // 375
+        read e;  // 376
+        read g;  // 377
+      } else {
+        e = c + g;  // 378
+        print e;  // 379
+        read g;  // 380
+        print g;  // 381
+        print d;  // 382
+        read j;  // 383
+      }
+    }
+    print a;  // 384
+    read d;  // 385
+    print e;  // 386
+    read a;  // 387
+    print f;  // 388
+    read i;  // 389
+    b = h + 519 / 504;  // 390
+  }
+  print f;  // 391
+  call P3;  // 392
+}
+
+procedure P3 {
+  if (((j > 224) || (j != 755)) || ((226 > c) && (e > g))) then {  // 393
+    d = 756;  // 394
+  } else {
+    while (((c < 956) && (f - g % d >= c)) && (716 < b)) {  // 395
+      print b;  // 396
+      print a;  // 397
+      print a;  // 398
+      if (!((284 < g) && (f <= h))) then {  // 399
+        read e;  // 400
+      } else {
+        print e;  // 401
+        print a;  // 402
+        d = 150;  // 403
+        g = g - 413;  // 404
+        read c;  // 405
+        print c;  // 406
+        a = h;  // 407
+        read c;  // 408
+        b = 714;  // 409
+        read j;  // 410
+      }
+      e = d;  // 411
+      read c;  // 412
+    }
+    print a;  // 413
+    while ((206 >= d) || (775 - d % (144) >= g)) {  // 414
+      if ((!(a == d)) && (!(e <= j))) then {  // 415
+        a = g + e / h;  // 416
+        f = d - e % h;  // 417
+        print g;  // 418
+        read e;  // 419
+      } else {
+        print e;  // 420
+        read h;  // 421
+        d = a + 329 / a;  // 422
+        read i;  // 423
+        d = j - 848 * i;  // 424
+        print c;  // 425
+        read b;  // 426
+        j = 797 - 206 % d;  // 427
+        print e;  // 428
+      }
+    }
+    if (((e < h) && (e < b)) && (!(e > j))) then {  // 429
+      if (a == a) then {  // 430
+        j = c;  // 431
+        print a;  // 432
+        print c;  // 433
+        print g;  // 434
+        print g;  // 435
+        print i;  // 436
+      } else {
+        e = 840 - h / i;  // 437
+        a = b + d % i;  // 438
+        print i;  // 439
+        read f;  // 440
+        print c;  // 441
+        g = e + 106 % (g);  // 442
+        read c;  // 443
+      }
+      while (((h <= h) || (g >= b)) && (606 == j + j)) {  // 444
+        read e;  // 445
+        g = 388 + b * c;  // 446
+      }
+      print g;  // 447
+      print a;  // 448
+    } else {
+      print j;  // 449
+      b = b + h;  // 450
+      read e;  // 451
+      b = f - a / g;  // 452
+    }
+    read i;  // 453
+  }
+  read h;  // 454
+  print d;  // 455
+  print b;  // 456
+  read f;  // 457
+}

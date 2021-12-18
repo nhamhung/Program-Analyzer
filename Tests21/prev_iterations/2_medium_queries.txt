@@ -1,0 +1,455 @@
+1 - all statements
+stmt s;
+Select s
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+2 - all variables
+variable v;
+Select v
+a, b, c, d, e, f, g, h
+5000
+3 - all constants
+constant c;
+Select c
+1, 2, 3, 4, 5
+5000
+4 - read statements
+read read;
+Select read
+2, 4, 15, 21
+5000
+5 - print statements
+print print;
+Select print
+6, 8, 12, 13, 14, 17
+5000
+6 - if statements
+if if;
+Select if
+5, 11, 19
+5000
+7 - while statements
+while while;
+Select while
+3, 9
+5000
+8 - assign statements
+assign assign;
+Select assign
+1, 7, 10, 16, 18, 20
+5000
+9 - select procedure
+procedure procedure;
+Select procedure
+procedure
+5000
+10 - select statements with wildcard follows 
+stmt s;
+Select s such that Follows(_,_) 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+11 - select print with wildcard followsT
+print pr;
+Select pr such that Follows*(_,_)
+6, 8, 12, 13, 14, 17
+5000
+12 - select read with wildcard parent 
+read re;
+Select re such that Parent(_,_)
+2, 4, 15, 21
+5000
+13 - select ifs with wildcard parentT
+if ifs;
+Select ifs such that Parent*(_,_)
+5, 11, 19
+5000
+14 - select stmt with wildcard follows and wildcard pattern
+stmt s; assign a;
+Select s such that Follows(_,_) pattern a(_,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+15 - select stmt with wildcard followsT and wildcard pattern
+stmt s; assign a;
+Select s such that Follows*(_,_) pattern a(_,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+16 - select variables with wildcard parent and wildcard pattern
+variable v; assign a;
+Select v such that Parent(_,_) pattern a(_,_)
+a, b, c, d, e, f, g, h
+5000
+17 - select constants with wildcard parentT and wildcard pattern
+constant c; assign a;
+Select c such that Parent*(_,_) pattern a(_,_)
+1, 2, 3, 4, 5
+5000
+18 - select stmt with wildcard Uses
+stmt s; while w;
+Select s such that Uses(w, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+19 - select stmt with wildcard Modifies
+stmt s; if if;
+Select s such that Modifies(if, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+20 - select stmt with wildcard Modifies and wildcard pattern
+stmt s; while w; assign a;
+Select s such that Modifies(w, _) pattern a(_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+22 - select stmt with wildcard Modifies and wildcard pattern
+stmt s; assign a, a1;
+Select s such that Modifies(a1, _) pattern a(_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+23 - select variables with wildcard Uses and wildcard pattern
+variable v; while w; assign a;
+Select v such that Uses(w, _) pattern a(_, _)
+a, b, c, d, e, f, g, h
+5000
+24 - select variables with wildcard Uses and wildcard pattern
+variable v; print pr; assign a;
+Select pr such that Uses(pr, _) pattern a(_, _)
+6, 8, 12, 13, 14, 17
+5000
+25 - select variables with read uses wildcard
+variable v; read r; 
+Select v such that Uses(r,_)
+none
+5000
+26 - select stmt with read uses wildcard
+stmt s; read r; 
+Select s such that Uses(r,_)
+none
+5000
+27 - select print with read uses wildcard
+print p; read r; 
+Select p such that Uses(r,_)
+none
+5000
+28 - select variables with print modifies wildcard
+variable v; print pr; 
+Select v such that Modifies(pr,_)
+none
+5000
+29 - select ifs with print modifies wildcard
+if i; print pr; 
+Select i such that Modifies(pr,_)
+none
+5000
+30 - select constants with print modifies wildcard
+constant c; print pr; 
+Select c such that Modifies(pr,_)
+none
+5000
+31 - select stmt with read uses wildcard and wildcard pattern
+stmt s; read r; assign a;
+Select s such that Uses(r,_) pattern a(_,_)
+none
+5000
+32 - select constants with print modifies wildcard and wildcard pattern
+constant c; print pr; assign a; 
+Select c such that Modifies(pr,_) pattern a(_,_)
+none
+5000
+100 - select all stmts which uses 'a'
+stmt s;
+Select s such that Uses(s, "a")
+3, 5, 9, 11, 19
+5000
+101 - select all assignment stmts which uses 'a'
+assign a;
+Select a such that Uses(a, "a")
+none
+5000
+102 - select all stmts which uses 'h'
+stmt s;
+Select s such that Uses(s, "h")
+3, 5, 9, 11, 13
+5000
+103 - select all assignment stmts which uses 'h'
+assign a;
+Select a such that Uses(a, "h")
+none
+5000
+104 - select all assignment stmts with 'e' on LHS and RHS
+assign a;
+Select a such that Uses(a, "e") pattern a("e", _)
+7
+5000
+105 - select all assignment stmts with 'a' on LHS and 'e' on RHS
+assign a;
+Select a such that Uses(a, "e") pattern a("a", _)
+20
+5000
+106 - select all stmts that uses 'e'
+stmt s; assign a;
+Select s such that Uses(s, "e") pattern a(_, _)
+3, 5, 6, 7, 8, 9, 10, 14, 17, 19, 20
+5000
+107 - select all variables that appear on LHS of an assign stmt and is being used by a statement
+stmt s; variable v; assign a;
+Select v such that Uses(s, v) pattern a(v, _)
+d, e, a, f
+5000
+108 - select all variables that appear on LHS and RHS of assign statement
+variable v; assign a;
+Select v such that Uses(a, v) pattern a(v, _)
+d, e
+5000
+109 - select all variables used in a while stmt
+while w; variable v;
+Select v such that Uses(w, v)
+a, b, c, d, e, f, g, h
+5000
+109 - select all variables used in an if stmt
+if if; variable v;
+Select v such that Uses(if, v)
+a, b, c, d, e, f, g, h
+5000
+110 - select all if statements which uses 'b'
+if if;
+Select if such that Uses(if, "b")
+5, 11
+5000
+111 - select all variables being used
+variable v; stmt s;
+Select v such that Uses(s, v)
+a, b, c, d, e, f, g, h
+5000
+201 - just follows stmt among non-container stmts
+stmt s;
+Select s such that Follows(17, s)
+18
+5000
+202 - just follows stmt among non-container stmts
+stmt s;
+Select s such that Follows(s, 18)
+17
+5000
+203 - just followsT among top level of procedure
+stmt s;
+Select s such that Follows*(s, 19)
+1, 2, 3, 17, 18
+5000
+204 - just followsT among top level of procedure
+stmt s;
+Select s such that Follows*(1, s)
+2, 3, 17, 18, 19
+5000
+205 - parent in if-else
+stmt s;
+Select s such that Parent(19, s)
+20, 21
+5000
+206 - parent in if-else nested in while
+stmt s;
+Select s such that Parent(5, s)
+6, 7, 8, 9, 14
+5000
+207 - parent in top-level while stmt
+stmt s;
+Select s such that Parent(3, s)
+4, 5, 15, 16
+5000
+208 - parent in nested while stmt
+stmt s;
+Select s such that Parent(9, s)
+10, 11
+5000
+209 - parentT in top-level while stmt
+stmt s;
+Select s such that Parent*(3, s)
+4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+5000
+210 - parentT in nested if stmt
+stmt s;
+Select s such that Parent*(5, s)
+6, 7, 8, 9, 10, 11, 12, 13, 14
+5000
+211 - Follows with pattern with LHS variable identifier
+stmt s; assign a;
+Select s such that Follows(s,2) pattern a("a", _)
+1
+5000
+212 - Follows with pattern with RHS constant substring
+stmt s; assign a;
+Select s such that Follows(s,2) pattern a(_, _"3"_)
+1
+5000
+213 - Follows with pattern with RHS variable substring
+stmt s; assign a;
+Select s such that Follows(s,2) pattern a(_, _"c"_)
+1
+5000
+214 - FollowsT with pattern with RHS variable substring
+stmt s; assign a;
+Select a such that Follows*(1, a) pattern a(_, _"d"_)
+18
+5000
+215 - FollowsT with pattern with RHS constant substring
+stmt s; assign a;
+Select s such that Follows*(1, s) pattern a(_, _"3"_)
+2, 3, 17, 18, 19
+5000
+216 - FollowsT with pattern with LHS variable identifier
+stmt s; assign a;
+Select s such that Follows*(1, s) pattern a("e", _)
+2, 3, 17, 18, 19
+5000
+217 - ParentT with pattern that assigns to a variable synonym
+stmt s; assign a; variable v;
+Select a such that Parent*(3, a) pattern a(v, _)
+7, 10, 16
+5000
+300 - All variables modified by statement 1
+variable v;
+Select v such that Modifies(1, v)
+a
+5000
+301 - All statements which modifies a variable
+stmt s; variable v;
+Select s such that Modifies(s, v)
+1, 2, 4, 7, 3, 5, 9, 10, 15, 16, 18, 19, 20, 21
+5000
+302 - All statements which modifies variable 'd'
+stmt s;
+Select s such that Modifies(s, "d")
+2, 4, 3, 15, 16
+5000
+303 - All assignments which modifies variable 'e'
+assign a;
+Select a such that Modifies(a, "e")
+7, 18
+5000
+304 - All while statements which modifies variable 'e'
+while w;
+Select w such that Modifies(w, "e")
+3
+5000
+304 - All while statements which modifies a variable
+while w; variable v;
+Select w such that Modifies(w, v)
+3, 9
+5000
+305 - All if statements which modifies variable 'e'
+if ifs;
+Select ifs such that Modifies (ifs, "e")
+5, 19
+5000
+306 - All if statements which modifies a variable
+if ifs; variable v;
+Select ifs such that Modifies(ifs, v)
+5, 19
+5000
+307 - All read statements which modifies variable 'd'
+read r;
+Select r such that Modifies(r, "d")
+2, 4, 15
+5000
+308 - All read statements which modifies a variable
+read r; variable v;
+Select r such that Modifies(r, v)
+2, 4, 15, 21
+5000
+309 - All assignments which uses variable 'b'
+assign a;
+Select a pattern a(_, _"b"_)
+1
+5000
+310 - All assignments which modifies variable 'a'
+assign a;
+Select a pattern a("a", _)
+1, 20
+5000
+311 - All statements which modifies variable 'c'
+stmt s;
+Select s pattern a("c", _)
+none
+5000
+312 - All assignments which uses constant '3'
+assign a;
+Select a pattern a(_, _"3"_)
+1, 18
+5000
+313 - All variables which are modified by an assign statement
+variable v; assign a;
+Select v such that Modifies(a, v) pattern a(v, _)
+a, e, f, d
+5000
+314 - All assignments which both modifies and uses variable 'e'
+assign a;
+Select a such that Modifies(a, "e") pattern a(_, _"e"_)
+7
+5000
+315 - All assignments which both modifies and uses variable 'e'
+assign a;
+Select a such that Modifies(a, "e") pattern a("e", _"e"_)
+7
+5000
+316 - All assignments which modifies 'a' and uses '3'
+assign a;
+Select a such that Modifies(a, "a") pattern a(_, _"3"_)
+1
+5000
+317 - All statements which modifies variable 'e' given an assignment which uses const '3'
+stmt s; assign a;
+Select s such that Modifies(s, "e") pattern a(_, _"3"_)
+7, 18, 21, 19, 3, 5
+5000
+318 - All if statements which modifies variable 'a' given an assignment which modifies variable 'a'
+if ifs; assign a;
+Select ifs such that Modifies(ifs, "a") pattern a("a", _)
+19
+5000
+319 - All while statements which modifies variable 'e' given an assignment with 'e' on both LHS and RHS
+while w; assign a;
+Select w such that Modifies(w, "e") pattern a("e", _"e"_)
+3
+5000
+320 - All read statements which modifies variable 'd' given an assignment with 'e' on both LHS and RHS
+read r; assign a;
+Select r such that Modifies(r, "d") pattern a("e", _"e"_)
+2, 4, 15
+5000
+321 - All statement numbers which modifies variable 'd' given an assignment with 'a' on both LHS and RHS
+stmt s; assign a;
+Select s such that Modifies(s, "d") pattern a("a", _"a"_)
+none
+5000
+322 - All statement numbers which modifies variable 'd' given an assignment with 'e' on both LHS ans RHS
+stmt s; assign a;
+Select s such that Modifies(s, "d") pattern a("e", _"e"_)
+2, 3, 4, 15, 16
+5000
+323 - All variables which are modified by a statement s given an assignment which modifies 'a' and uses '1'
+stmt s; variable v; assign a;
+Select v such that Modifies(s, v) pattern a("a", _"1"_)
+a, d, e, f
+5000
+323 - All variables which are modified by statement '3' given an assignment with 'd' on both LHS and RHS
+stmt s; variable v; assign a;
+Select v such that Modifies(3, v) pattern a("d", _"d"_)
+d, e, f
+5000
+324 - All variables which are modified by an if statement given an assignment which modifies 'e' and uses '3'
+variable v; if ifs; assign a;
+Select v such that Modifies(ifs, v) pattern a("e", _"3"_)
+e, f, a
+5000
+325 - All read statements which modifies variable 'd' given an assignment which modifies variable 'f'
+read r; assign a;
+Select r such that Modifies(r, "d") pattern a("f", _)
+2, 4, 15
+5000
+326 - All read statements which modifies variable 'd' given an assignment which modifies 'a' and uses 'b'
+read r; assign a;
+Select r such that Modifies(r, "d") pattern a("a", _"b"_)
+2, 4, 15
+5000
+326 - All read statements which modifies variable 'd' given an assignment which modifies 'a' and uses '0'
+read r; assign a;
+Select r such that Modifies(r, "d") pattern a("a", _"0"_)
+none
+5000

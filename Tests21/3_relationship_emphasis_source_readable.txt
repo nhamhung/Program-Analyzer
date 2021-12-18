@@ -1,0 +1,295 @@
+procedure P1 {
+  v6 = 7 + v4 % v5 / (v10) / (v4 - v8 % 996 - v5);  // 1
+  read v10;  // 2
+  print v7;  // 3
+  if (v6 + 389 / v2 > v8 - v7 * v3) then {  // 4
+    v6 = v8 / v10 + (v9 - v2 % (v8));  // 5
+    read v1;  // 6
+  } else {
+    v6 = 40 + 11 % (v3) + v1 * (v6 + v6 / v3) + v8 / (492) / v10 % v1;  // 7
+  }
+  print v8;  // 8
+}
+
+procedure P2 {
+  print v7;  // 9
+  read v9;  // 10
+  if (v8 > v8 - v2 / v7) then {  // 11
+    while (542 <= 411) {  // 12
+      read v8;  // 13
+    }
+  } else {
+    read v4;  // 14
+    read v8;  // 15
+  }
+  v3 = v5 * v10 / v4;  // 16
+  read v1;  // 17
+}
+
+procedure P3 {
+  if (382 == v10) then {  // 18
+    print v1;  // 19
+  } else {
+    while (v8 < 248) {  // 20
+      read v10;  // 21
+      print v6;  // 22
+    }
+  }
+  read v2;  // 23
+  if (v5 + v1 % v8 < v3) then {  // 24
+    if (496 > v9) then {  // 25
+      read v10;  // 26
+    } else {
+      print v1;  // 27
+      read v3;  // 28
+    }
+  } else {
+    read v1;  // 29
+    if (71 - 472 / (v7) != v7) then {  // 30
+      read v1;  // 31
+      v3 = v4 + v4 / (v9) + v7 - v3 * (v7) / v6;  // 32
+    } else {
+      call P1;  // 33
+    }
+  }
+  if (v6 > v1 + v5 * (v5)) then {  // 34
+    if (v4 > 96) then {  // 35
+      read v1;  // 36
+      while (354 != v8 + v10) {  // 37
+        read v8;  // 38
+      }
+    } else {
+      while (v4 >= 631) {  // 39
+        v1 = v1 - v6 * v7 + v9 * v10 - v4 % (v6) % v10 * v7;  // 40
+        if (v9 != v8) then {  // 41
+          while (v4 < v1) {  // 42
+            print v5;  // 43
+          }
+        } else {
+          call P1;  // 44
+          while (330 > v10) {  // 45
+            print v3;  // 46
+          }
+        }
+      }
+    }
+    v5 = 322 + v1 / v7 + v2 / (v4) % (850 - v8 % (v8)) - 209 / v6 * (v1) * v10;  // 47
+  } else {
+    if (862 == v5 - v5 / v8) then {  // 48
+      while (901 != v6) {  // 49
+        v10 = v7 * (825) - 879 / v9 / (843 + v8 * (v9)) % (415 + v10 % 932 - v4 % v2 % (v5 - v9));  // 50
+        while (959 == v2) {  // 51
+          print v10;  // 52
+          while (v4 != v4) {  // 53
+            v8 = v10 + v10 / (677) - v6 + v10 / 34;  // 54
+          }
+        }
+      }
+      if (v5 != v10) then {  // 55
+        if (372 > v3) then {  // 56
+          while (v3 > 444) {  // 57
+            print v10;  // 58
+            call P1;  // 59
+          }
+          read v7;  // 60
+        } else {
+          v3 = v6 * (v7) + v9 * (886 - 300 % v10) * v6;  // 61
+          v10 = (v10);  // 62
+        }
+        if (v1 < 137 + 401 / (v2)) then {  // 63
+          read v10;  // 64
+          read v6;  // 65
+        } else {
+          v3 = 999 / (460) - 389 % v9 * 375;  // 66
+          if (v6 >= v8 - v10) then {  // 67
+            read v8;  // 68
+          } else {
+            print v1;  // 69
+          }
+        }
+      } else {
+        read v4;  // 70
+        read v9;  // 71
+      }
+    } else {
+      read v6;  // 72
+      read v9;  // 73
+    }
+  }
+  while (v2 - 494 * v9 != v2 - 737 * v8) {  // 74
+    v2 = 855 % (v5) * (v10);  // 75
+  }
+}
+
+procedure P4 {
+  v7 = v3 - 900 * v4 + (v1) + v10 / (v10) / v10 / (v6 % v5);  // 76
+  while (779 != 385) {  // 77
+    call P1;  // 78
+    if (v4 + v2 <= v3 - 984 * v8) then {  // 79
+      v8 = v9 % v10 - v9 % (949 + 86) * v6;  // 80
+      v8 = v10 + v9 / v4 + v8 % v2 % (v6 - v5 % 29) - v5 * (v8) % 51 / 954;  // 81
+    } else {
+      read v6;  // 82
+      print v6;  // 83
+    }
+  }
+  print v2;  // 84
+  while (v3 <= 613) {  // 85
+    if (v8 >= v4) then {  // 86
+      call P2;  // 87
+    } else {
+      read v2;  // 88
+    }
+    v10 = v2 + 742 / (v4) - 931 % v9 % v9 + v4;  // 89
+  }
+  if (v3 == v8) then {  // 90
+    print v10;  // 91
+    while (9 == v7) {  // 92
+      read v9;  // 93
+    }
+  } else {
+    while (v10 >= v7) {  // 94
+      while (v6 != 814) {  // 95
+        v2 = v1 + v7 % v2 - v2 * v9 * (850) - v7;  // 96
+        v2 = v2 % (323);  // 97
+      }
+    }
+  }
+}
+
+procedure P5 {
+  v2 = v6 / v9 + 185 % (v4) * (872 - v10 * v8) / v10;  // 98
+  print v4;  // 99
+  print v5;  // 100
+  v4 = v10 % (976) - (v4) / (362 + v5 / v6 + v8 * (v2) % 264);  // 101
+  call P4;  // 102
+}
+
+procedure P6 {
+  print v1; // 103
+  v1 = 12; // 104
+  v2 = v1 + v3; // 105
+  while (v3 < 5) { // 106
+    v3 = v2 * 2 + 1; // 107
+    v3 = v2 + v3 % 20 / (v6 + 30); // 108
+    call P3; // 109
+    if (v10 == 3) then { // 110
+        v5 = v3 + 1; // 111
+        v6 = v3 + v5; // 112
+    } else {
+        v7 = v5 + v3; // 113
+        v8 = v7 - v9; // 114
+        if (v2 + 5 <= 9) then { // 115
+            v10 = v8 + 1; // 116
+            v8 = v5 - 2; // 117
+        } else {
+            v10 = v3 + v4; // 118
+        }
+    }
+  }
+  v3 = v1 + v2; // 119
+  v1 = v3 + v2; // 120
+  v2 = v1 + v3; // 121
+}
+
+procedure P7 {
+  v5 = 154 - v7 + v6 / v8 % (591) - (224) - (v1);  // 122
+  while (v1 > v10 + v10) {  // 123
+    print v10;  // 124
+    print v10;  // 125
+    if (!((480 <= 147) || (110 >= v9))) then {  // 126
+      read v2;  // 127
+    } else {
+      v10 = v10 * v1 / (v7 - v1) / (v5);  // 128
+    }
+  }
+  print v9;  // 129
+  read v7;  // 130
+  if ((!(982 >= v10)) && ((v6 > v7) || (v7 >= v10))) then {  // 131
+    while (!((v2 < v1) && (v8 >= v5))) {  // 132
+      v10 = 172 + (200) - 404 % v10 * v3 % v9 - (v10 - v8) * 904;  // 133
+    }
+    if (!(v9 != v2)) then {  // 134
+      if ((v10 > v8) && ((491 < v5) && (v9 < v8))) then {  // 135
+        if ((519 > v3) || (!(805 + v8 % (505) != 54))) then {  // 136
+          print v6;  // 137
+        } else {
+          v4 = v4 - 173 * (v5) * 233 - (v9) - v6 % (687) % v3 * v3 % v10;  // 138
+          print v2;  // 139
+          print v2;  // 140
+        }
+      } else {
+        print v4;  // 141
+      }
+      if (((v7 + 591 * 274 <= 184) || (v7 - v10 * v10 <= 768)) && (!(v2 != 808))) then {  // 142
+        print v10;  // 143
+        print v2;  // 144
+        print v2;  // 145
+      } else {
+        print v5;  // 146
+      }
+    } else {
+      print v10;  // 147
+    }
+  } else {
+    while (!((v5 >= v10) && (v6 == v2))) {  // 148
+      if (v2 < v6) then {  // 149
+        v1 = 151 / (v4) - v10 * v8 % (327) / (v1 % v3) + 299 / (v4 - 522 % v1 + 196 / v1 * v9) % 417;  // 150
+        read v1;  // 151
+      } else {
+        v4 = 238 + v3 * v2 - v6 + v5 % (v2) / (v2 + v7 % v3) % (v8 + v7 - 984 / (262) * v6) % (v5 % 523 - (v2 + 281));  // 152
+        while ((v4 <= 104) || (!(340 <= 384))) {  // 153
+          read v8;  // 154
+          read v2;  // 155
+          print v9;  // 156
+        }
+        read v10;  // 157
+      }
+    }
+    read v7;  // 158
+  }
+  print v1; // 159
+}
+
+procedure P8 {
+    while (1 == 1) { // 160
+        read a; // 161
+        while (1 == 1) { // 162
+            while (1 == 1) { // 163
+                if (5 == 5) then { // 164
+                    if (5 == 5) then { // 165
+                        if (5 == 5) then { // 166
+                            while (1 == 1) { // 167
+                                read a; // 168
+                            }
+                        } else {
+                            read a; // 169
+                        }
+                    } else {
+                        if (5 == 5) then { // 170
+                            read a; // 171
+                        } else {
+                            read a; // 172
+                        }
+                    }
+                } else {
+                    if (5 == 5) then { // 173
+                        if (5 == 5) then { // 174
+                            read a; // 175
+                        } else {
+                            read a; // 176
+                        }
+                    } else {
+                        if (5 == 5) then { // 177
+                            read a; // 178
+                        } else {
+                            read a; // 179
+                        }
+                    }
+                    read a; // 180
+                }
+            }
+        }
+    }
+    read a; // 181
+}
